@@ -1,6 +1,7 @@
 [build.environment]
   NODE_VERSION = "16"
+  YARN_VERSION = "1.17.3"
 
 [build]
   publish = ".vitepress/dist"
-  command = "npm run build"
+  command = "yarn run build"

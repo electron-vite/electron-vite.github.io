@@ -7,14 +7,18 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
   "engines": {
     "node": ">=14"
+  },
+  "dependencies": {
+    "vue": "^3.2.31",
+    "vue-tsc": "^0.33.9"
   },
   "devDependencies": {
     "@oceanlvr/eslint-config": "0.19.6-beta",
@@ -24,7 +28,11 @@
     "eslint": "^8.12.0",
     "markdown-it": "^12.3.2",
     "typescript": "^4.6.3",
+    "unplugin-vue-components": "^0.18.5",
     "vite": "^2.9.1",
-    "vitepress": "^0.22.3"
+    "vite-plugin-restart": "^0.1.1",
+    "vite-plugin-windicss": "^1.8.3",
+    "vitepress": "^0.22.3",
+    "windicss": "^3.5.1"
   }
 }

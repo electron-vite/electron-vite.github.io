@@ -1,9 +1,20 @@
 {
-  "eslint.packageManager": "npm",
+  "cSpell.words": [
+    "attributify",
+    "codemirror",
+    "composables",
+    "demi",
+    "docsearch",
+    "hljs",
+    "prismjs",
+    "splitpanes",
+    "vite",
+  ],
+  "eslint.packageManager": "yarn",
   "prettier.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": false
   },
   "files.associations": {
     "*.css": "postcss"
@@ -13,4 +24,5 @@
       "directory": ".vitepress"
     }
   ],
+  "windicss.sortOnSave": false
 }
