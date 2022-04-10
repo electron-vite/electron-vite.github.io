@@ -1,27 +1,14 @@
-import { defineConfig } from 'vite-plugin-windicss'
-import typography from 'windicss/plugin/typography'
-
-export default defineConfig({
-  extract: {
-    include: [
-      '.vitepress/theme/**/*.{ts,vue}',
-    ],
-  },
-  safelist: [
-    'pb-5',
-    'logo-float-xl',
-    'dark:text-white',
-    'opacity-85',
-  ],
-  shortcuts: {
-    'logo-float-xl': 'text-6xl m-2 mr-6 float-right',
-  },
+module.exports = {
+  content: ['./.vitepress/theme/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'media',
   theme: {
     extend: {
       screens: {
         '2xl': '1400px',
       },
       colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
         primary: {
           DEFAULT: '#AD49FE',
           50: '#9863FF',
@@ -34,6 +21,30 @@ export default defineConfig({
           700: '#B53EFE',
           800: '#B939FE',
           900: '#BD34FE',
+        },
+        dark: {
+          50: '#4A4A4A',
+          100: '#3C3C3C',
+          200: '#323232',
+          300: '#2D2D2D',
+          400: '#222222',
+          500: '#1F1F1F',
+          600: '#1C1C1E',
+          700: '#1B1B1B',
+          800: '#181818',
+          900: '#0F0F0F',
+        },
+        light: {
+          50: '#FDFDFD',
+          100: '#FCFCFC',
+          200: '#FAFAFA',
+          300: '#F8F9FA',
+          400: '#F6F6F6',
+          500: '#F2F2F2',
+          600: '#F1F3F5',
+          700: '#E9ECEF',
+          800: '#DEE2E6',
+          900: '#DDE1E3',
         },
       },
       typography: {
@@ -64,7 +75,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [
-    typography(),
-  ],
-})
+  plugins: [require('@tailwindcss/typography')],
+}

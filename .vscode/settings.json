@@ -9,6 +9,7 @@
     "prismjs",
     "splitpanes",
     "vite",
+    "vitest"
   ],
   "eslint.packageManager": "yarn",
   "prettier.enable": false,

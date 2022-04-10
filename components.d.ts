@@ -4,7 +4,13 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Applayout: typeof import('./.vitepress/theme/components/atoms/Applayout.vue')['default']
+    AppLayout: typeof import('./.vitepress/theme/components/atoms/AppLayout.vue')['default']
+    TheHeader: typeof import('./.vitepress/theme/components/TheHeader.vue')['default']
+    TheHome: typeof import('./.vitepress/theme/components/TheHome.vue')['default']
     TheLayout: typeof import('./.vitepress/theme/components/TheLayout.vue')['default']
+    ThePage: typeof import('./.vitepress/theme/components/ThePage.vue')['default']
+    TheSidebar: typeof import('./.vitepress/theme/components/TheSidebar.vue')['default']
   }
 }
 
