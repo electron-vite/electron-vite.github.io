@@ -7,7 +7,7 @@ This is the documentation website for [Electron Vite].
 ## Development
 
 ```bash
-yarn
+pnpm
 // run dev server
-yarn dev
+pnpm run dev
 ```
