@@ -1,6 +1,6 @@
 <template>
   <TheHeader />
-  <AppLayout class="grid-leyout">
+  <AppLayout>
     <TheSidebar />
     <ContentLayout>
       <div class="content prose min-w-0">
@@ -10,6 +10,3 @@
     </ContentLayout>
   </AppLayout>
 </template>
-
-<style scoped lang="scss">
-</style>

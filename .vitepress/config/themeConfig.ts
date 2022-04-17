@@ -1,4 +1,5 @@
 import type { DefaultTheme } from 'vitepress'
+
 import { sidebar } from './sidebar'
 import { nav } from './nav'
 

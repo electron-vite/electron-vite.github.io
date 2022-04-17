@@ -31,19 +31,18 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Publish', link: '/build/publish' },
 
       { text: 'CI/CD', link: '/ci-cd/' },
-      { text: 'CI/CD', link: '/ci-cd/github-actions' },
+      { text: 'GitHub Actions', link: '/ci-cd/github-actions' },
 
-      { text: 'META', link: '/meta/' },
-      { text: 'Q&A', link: '/meta/qa' },
-      { text: 'Rlease Note', link: '/meta/release-note' },
-      { text: 'Contributing', link: '/meta/contributing' },
-      { text: 'Sponsor', link: '/meta/sponsor' },
+      { text: 'Other', link: '/other/' },
+      { text: 'Q&A', link: '/other/qa' },
+      { text: 'Release Note', link: '/other/release-note' },
+      { text: 'Contributing', link: '/other/contributing' },
+      { text: 'Sponsor', link: '/other/sponsor' },
     ],
   },
   {
     text: 'Plugin',
     items: [
-      // General
       { text: 'Plugin', link: '/plugin/' },
     ],
   },

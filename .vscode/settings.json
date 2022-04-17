@@ -9,6 +9,7 @@
     "prismjs",
     "splitpanes",
     "vite",
+    "vitepress",
     "vitest"
   ],
   "eslint.packageManager": "yarn",

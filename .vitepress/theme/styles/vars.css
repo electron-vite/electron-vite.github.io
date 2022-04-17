@@ -11,15 +11,15 @@
 }
 
 html {
-  --windi-bg: theme('colors.light.100');
-  --windi-hover-bg: theme('colors.light.400');
-  --windi-text: theme('colors.gray.800');
-  --windi-bc: theme('colors.gray.200');
+  --vite-electron-bg: theme('colors.light.100');
+  --vite-electron-hover-bg: theme('colors.light.400');
+  --vite-electron-text: theme('colors.gray.800');
+  --vite-electron-bc: theme('colors.gray.200');
 }
 
 html.dark {
-  --windi-bg: theme('colors.dark.800');
-  --windi-hover-bg: theme('colors.dark.300');
-  --windi-text: theme('colors.gray.100');
-  --windi-bc: theme('colors.dark.300');
+  --vite-electron-bg: theme('colors.dark.800');
+  --vite-electron-hover-bg: theme('colors.dark.300');
+  --vite-electron-text: theme('colors.gray.100');
+  --vite-electron-bc: theme('colors.dark.300');
 }
