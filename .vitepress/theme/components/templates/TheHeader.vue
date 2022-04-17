@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import { useRepo } from '@/composables/repo'
+// import { useRepo } from '@/composables/repo'
 
 const { theme } = useData()
-const repo = useRepo()
+// const repo = useRepo()
 </script>
 <template>
   <header

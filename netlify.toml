@@ -1,7 +1,7 @@
 [build.environment]
+  NPM_FLAGS = "--prefix=/dev/null"
   NODE_VERSION = "16"
-  YARN_VERSION = "1.17.3"
 
 [build]
   publish = ".vitepress/dist"
-  command = "yarn run build"
+  command = "npx pnpm i --frozen-lockfile --store=node_modules/.pnpm-store && npm run build"

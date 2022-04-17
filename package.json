@@ -24,8 +24,10 @@
     "node": ">=14"
   },
   "dependencies": {
+    "@docsearch/css": "^3.0.0",
     "@docsearch/js": "^3.0.0",
     "@vueuse/core": "^8.2.6",
+    "preact": "^10.7.1",
     "vue": "^3.2.31"
   },
   "devDependencies": {

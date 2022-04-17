@@ -57,7 +57,6 @@ export function useSearchBox(props: Readonly<{
     // based on the language
     const facetFilters = props.multilang ? [`language:${lang.value}`] : []
     docsearch(
-    // @ts-expect-error-next-line
       Object.assign({}, userOptions, {
         container: '#docsearch',
         searchParameters: Object.assign({}, userOptions.searchParameters, {
@@ -68,7 +67,7 @@ export function useSearchBox(props: Readonly<{
           ),
         }),
         navigator: {
-          navigate: ({ itemUrl }) => {
+          navigate: ({ itemUrl }: any) => {
             const { pathname: hitPathname } = new URL(
               window.location.origin + itemUrl,
             )
@@ -80,8 +79,8 @@ export function useSearchBox(props: Readonly<{
               router.go(itemUrl)
           },
         },
-        transformItems: (items) => {
-          return items.map((item) => {
+        transformItems: (items: any[]) => {
+          return items.map((item: any) => {
             return Object.assign({}, item, {
               url: getRelativePath(item.url),
             })
@@ -90,10 +89,11 @@ export function useSearchBox(props: Readonly<{
         hitComponent: ({
           hit,
           children,
-        }) => {
+        }: any) => {
           const relativeHit = hit.url.startsWith('http')
             ? getRelativePath(hit.url as string)
             : hit.url
+          // @ts-expect-error preact type error
           return React.createElement('a',
             {
               href: hit.url,
@@ -118,7 +118,7 @@ export function useSearchBox(props: Readonly<{
             children,
           )
         },
-      } as Omit<Parameters<typeof docsearch>[0], 'appId' | 'apiKey' | 'indexName'>),
+      } as Omit<Parameters<typeof docsearch>[0], 'apiKey' | 'indexName'>),
     )
   }
 
