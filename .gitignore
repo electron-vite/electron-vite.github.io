@@ -2,3 +2,6 @@ node_modules
 .DS_Store
 .algolia/.env
 .vitepress/dist/
+
+# Local Netlify folder
+.netlify

@@ -14,7 +14,7 @@ declare module 'vue' {
     'HeroiconsOutline:menuAlt2': typeof import('~icons/heroicons-outline/menu-alt2')['default']
     IconButton: typeof import('./.vitepress/theme/components/IconButton.vue')['default']
     IonIosSunny: typeof import('~icons/ion/ios-sunny')['default']
-    NavLink: typeof import('./.vitepress/theme/components/navLink.vue')['default']
+    NavLink: typeof import('./.vitepress/theme/components/NavLink.vue')['default']
     PageFooter: typeof import('./.vitepress/theme/components/PageFooter.vue')['default']
     SidebarHeader: typeof import('./.vitepress/theme/components/SidebarHeader.vue')['default']
     SidebarLink: typeof import('./.vitepress/theme/components/SidebarLink.vue')['default']
