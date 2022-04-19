@@ -1,14 +1,11 @@
 module.exports = {
   content: ['./.vitepress/theme/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: 'media',
   theme: {
     extend: {
       screens: {
         '2xl': '1400px',
       },
       colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
         primary: {
           DEFAULT: '#AD49FE',
           50: '#9863FF',
@@ -53,7 +50,7 @@ module.exports = {
             maxWidth: 'none',
             color: 'inherit',
             a: {
-              color: '#5AAFFF',
+              color: '#AD49FE',
               textDecoration: 'none',
             },
             b: { color: 'inherit' },

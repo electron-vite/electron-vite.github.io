@@ -4,7 +4,7 @@ import type { DefaultTheme, Header } from 'vitepress'
 import { getSideBarConfig } from '@/utils/getSideBarConfig'
 import { useActiveSidebarLinks } from '@/composables/activeSidebarLink'
 
-export const openSideBar = ref(true)
+export const openSideBar = ref(false)
 
 export const toggleSidebar = (to?: boolean) => {
   openSideBar.value = typeof to === 'boolean' ? to : !openSideBar.value

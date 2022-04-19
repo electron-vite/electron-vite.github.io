@@ -30,6 +30,9 @@ export default defineConfig({
       restart: '.vitepress/config/*.*',
     }),
   ],
+  build: {
+    sourcemap: true,
+  },
   optimizeDeps: {
     include: [
       '@vueuse/core',

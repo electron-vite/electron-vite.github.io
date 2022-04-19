@@ -37,7 +37,7 @@ function toggle() {
         class="px-4"
       >
         <li v-for="nav in item.items" :key="nav.text">
-          <div v-if="nav.text === 'separator'" class="border-b border-[color:var(--vite-electron-bc)] my-1 mx-3" />
+          <div v-if="nav.text === 'separator'" class="border-b border-[color:var(--electron-vite-bc)] my-1 mx-3" />
           <NavLink v-else :item="nav" class="whitespace-nowrap font-base hover:bg-gray-100  dark:hover:bg-dark-300 rounded w-full text-sm" />
         </li>
       </ul>

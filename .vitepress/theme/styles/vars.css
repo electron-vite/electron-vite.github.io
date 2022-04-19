@@ -11,15 +11,15 @@
 }
 
 html {
-  --vite-electron-bg: theme('colors.light.100');
-  --vite-electron-hover-bg: theme('colors.light.400');
-  --vite-electron-text: theme('colors.gray.800');
-  --vite-electron-bc: theme('colors.gray.200');
+  --electron-vite-bg: theme('colors.light.100');
+  --electron-vite-hover-bg: theme('colors.light.400');
+  --electron-vite-text: theme('colors.gray.800');
+  --electron-vite-bc: theme('colors.gray.200');
 }
 
 html.dark {
-  --vite-electron-bg: theme('colors.dark.800');
-  --vite-electron-hover-bg: theme('colors.dark.300');
-  --vite-electron-text: theme('colors.gray.100');
-  --vite-electron-bc: theme('colors.dark.300');
+  --electron-vite-bg: theme('colors.dark.800');
+  --electron-vite-hover-bg: theme('colors.dark.300');
+  --electron-vite-text: theme('colors.gray.100');
+  --electron-vite-bc: theme('colors.dark.300');
 }

@@ -11,11 +11,14 @@ declare module 'vue' {
     'Carbon:arrowLeft': typeof import('~icons/carbon/arrow-left')['default']
     'Carbon:logoGithub': typeof import('~icons/carbon/logo-github')['default']
     ContentLayout: typeof import('./.vitepress/theme/components/ContentLayout.vue')['default']
+    DropdownLink: typeof import('./.vitepress/theme/components/DropdownLink.vue')['default']
+    DropdownMenu: typeof import('./.vitepress/theme/components/DropdownMenu.vue')['default']
     'HeroiconsOutline:menuAlt2': typeof import('~icons/heroicons-outline/menu-alt2')['default']
     IconButton: typeof import('./.vitepress/theme/components/IconButton.vue')['default']
     IonIosSunny: typeof import('~icons/ion/ios-sunny')['default']
     NavLink: typeof import('./.vitepress/theme/components/NavLink.vue')['default']
     PageFooter: typeof import('./.vitepress/theme/components/PageFooter.vue')['default']
+    SidebarBackground: typeof import('./.vitepress/theme/components/SidebarBackground.vue')['default']
     SidebarHeader: typeof import('./.vitepress/theme/components/SidebarHeader.vue')['default']
     SidebarLink: typeof import('./.vitepress/theme/components/SidebarLink.vue')['default']
     SidebarLinkItem: typeof import('./.vitepress/theme/components/SidebarLinkItem.vue')['default']
@@ -29,6 +32,7 @@ declare module 'vue' {
     ToggleSidebar: typeof import('./.vitepress/theme/components/ToggleSidebar.vue')['default']
     TreeLink: typeof import('./.vitepress/theme/components/TreeLink.vue')['default']
     TreeMenu: typeof import('./.vitepress/theme/components/TreeMenu.vue')['default']
+    'Uil:angleDown': typeof import('~icons/uil/angle-down')['default']
     'Uil:angleRight': typeof import('~icons/uil/angle-right')['default']
   }
 }

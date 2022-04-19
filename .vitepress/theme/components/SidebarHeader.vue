@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useRepo } from '@/composables/repo'
 const repo = useRepo()
-defineEmits(['close'])
+const $emit = defineEmits<{
+  (event: 'close'): void
+}>()
 
 </script>
 
@@ -10,9 +12,11 @@ defineEmits(['close'])
     <IconButton @click="$emit('close')">
       <carbon:arrow-left />
     </IconButton>
-    <IconButton :href="repo?.link">
-      <carbon:logo-github />
-    </IconButton>
-    <ToggleDark />
+    <div class="flex items-center">
+      <IconButton :href="repo?.link">
+        <carbon:logo-github />
+      </IconButton>
+      <ToggleDark />
+    </div>
   </div>
 </template>

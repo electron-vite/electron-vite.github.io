@@ -1,8 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
-/**
- * Sidebar
- */
+// Sidebar
 export function isSideBarConfig(
   sidebar: DefaultTheme.SideBarConfig | DefaultTheme.MultiSideBarConfig,
 ): sidebar is DefaultTheme.SideBarConfig {

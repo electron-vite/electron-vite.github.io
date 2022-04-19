@@ -21,6 +21,6 @@ const { props: linkProps } = useNavLink(propsRefs.item, props.dropdown) as any
 
 <style scoped lang="pcss">
 .nav-dropdown {
-  @apply hover:text-primary hover:bg-[color:var(--vite-electron-hover-bg)] whitespace-nowrap font-normal rounded w-full text-sm;
+  @apply hover:text-primary hover:bg-[color:var(--electron-vite-hover-bg)] whitespace-nowrap font-normal rounded w-full text-sm;
 }
 </style>

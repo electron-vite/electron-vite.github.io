@@ -24,7 +24,7 @@ export function useNavLink(item: Ref<DefaultTheme.NavItemWithLink>, isDropdown =
 
     return {
       'class': {
-        'bg-[color:var(--vite-electron-bg)]': active && isDropdown,
+        'bg-[color:var(--electron-vite-bg)]': active && isDropdown,
         'text-primary': active && !isDropdown,
         isExternal,
       },

@@ -15,27 +15,23 @@ watch(openSideBar, (v) => {
 </script>
 
 <template>
-  <aside class="sidebar fixed z-50 lg:static lg:z-0">
+  <aside class="sidebar fixed z-50 lg:z-0 lg:static">
     <div class="h-full pointer-events-none">
-      <div
-        class="
-          lg:sticky
-          lg:h-[var(--full-header)]
-          lg:mt-[var(--header-height)]
-          sidebar-container
+      <SidebarBackground />
+      <div class="
           fixed top-0 left-0
-          w-auto h-full pointer-events-none
+          w-auto h-full pointer-events-auto
           transform -translate-x-full lg:transform-none transition-transform duration-200 ease-linear
           min-w-62
-          "
-      >
-        <div class="w-auto h-full bg-transparent">
-          <div class="sticky overflow-y-auto height-[var(--full-header)] mt-[var(--header-height)] menu-container">
-            <SidebarHeader @close="openSideBar = false" />
-            <div class="sticky top-[var(--header-height)] h-[var(--full-header)] overflow-y-auto">
-              <TreeMenu />
-              <SidebarNav />
-            </div>
+          lg:sticky
+          lg:h-[var(--full-header)]
+          lg:top-[var(--header-height)]"
+          :class="{ '-translate-x-0': openSideBar }">
+        <div class="w-auto h-full lg:bg-transparent bg-[color:var(--electron-vite-bg)]">
+          <SidebarHeader @close="openSideBar = false" />
+          <div class="sticky top-[var(--header-height)] h-[var(--full-header)] overflow-y-auto">
+            <TreeMenu />
+            <SidebarNav />
           </div>
         </div>
       </div>

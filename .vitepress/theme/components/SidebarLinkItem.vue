@@ -39,6 +39,8 @@ const link = resolveLink(site.value.base, props.item.link)
 // @ts-expect-error uncertain props
 const isChildActive = props.item.children && props.item.children.map(child => isActive(route, child.link)).some(Boolean)
 
+console.log(link)
+
 const style = computed(() => ([
   'transition duration-100',
   props.header
@@ -49,7 +51,7 @@ const style = computed(() => ([
       justify-between py-2 px-3 w-full rounded-md
       text-sm text-gray-700
       dark:text-gray-400
-      hover:text-primary hover:dark:text-primary hover:bg-[color:var(--vite-electron-hover-bg)]`
+      hover:text-primary hover:dark:text-primary hover:bg-[color:var(--electron-vite-hover-bg)]`
       : `relative
       inline-flex
       items-center

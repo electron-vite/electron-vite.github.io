@@ -4,6 +4,12 @@ import { sidebar } from './sidebar'
 import { nav } from './nav'
 
 const themeConfig: DefaultTheme.Config = {
+  // TODO algolia apply
+  algolia: {
+    appId: '',
+    apiKey: '',
+    indexName: '',
+  },
   repo: 'electron-vite/electron-vite',
   logo: '/assets/logo.svg',
   docsDir: '.',
