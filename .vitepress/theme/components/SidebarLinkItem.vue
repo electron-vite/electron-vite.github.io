@@ -39,8 +39,6 @@ const link = resolveLink(site.value.base, props.item.link)
 // @ts-expect-error uncertain props
 const isChildActive = props.item.children && props.item.children.map(child => isActive(route, child.link)).some(Boolean)
 
-console.log(link)
-
 const style = computed(() => ([
   'transition duration-100',
   props.header

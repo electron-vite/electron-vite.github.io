@@ -25,7 +25,7 @@ const repo = useRepo()
       </div>
       <div class="flex items-center lg:space-x-3 lg:pl-3 xl:pl-6">
         <IconButton class="hidden lg:inline-flex" :href="repo?.link">
-          <carbon:logo-github/>
+          <carbon:logo-github />
         </IconButton>
         <ToggleDark />
       </div>

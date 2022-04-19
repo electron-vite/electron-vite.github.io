@@ -18,7 +18,8 @@ watch(openSideBar, (v) => {
   <aside class="sidebar fixed z-50 lg:z-0 lg:static">
     <div class="h-full pointer-events-none">
       <SidebarBackground />
-      <div class="
+      <div
+        class="
           fixed top-0 left-0
           w-auto h-full pointer-events-auto
           transform -translate-x-full lg:transform-none transition-transform duration-200 ease-linear
@@ -26,7 +27,8 @@ watch(openSideBar, (v) => {
           lg:sticky
           lg:h-[var(--full-header)]
           lg:top-[var(--header-height)]"
-          :class="{ '-translate-x-0': openSideBar }">
+        :class="{ '-translate-x-0': openSideBar }"
+      >
         <div class="w-auto h-full lg:bg-transparent bg-[color:var(--electron-vite-bg)]">
           <SidebarHeader @close="openSideBar = false" />
           <div class="sticky top-[var(--header-height)] h-[var(--full-header)] overflow-y-auto">
