@@ -4,7 +4,7 @@ const site = isProd ? 'https://electron-vite.netlify.app' : 'http://localhost:30
 
 export const metaData = {
   title: 'Electron Vite',
-  description: 'Build Electron APP with Vite',
+  description: 'Use vite to build your electron application.',
   site,
   image: `${site}/assets/logo.png`,
 }

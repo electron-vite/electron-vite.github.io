@@ -49,7 +49,7 @@ const style = computed(() => ([
       justify-between py-2 px-3 w-full rounded-md
       text-sm text-gray-700
       dark:text-gray-400
-      hover:text-primary hover:dark:text-primary hover:bg-[color:var(--electron-vite-hover-bg)]`
+      hover:text-primary-500 hover:dark:text-primary-500 hover:bg-[color:var(--electron-vite-hover-bg)]`
       : `relative
       inline-flex
       items-center
@@ -59,9 +59,9 @@ const style = computed(() => ([
       dark:border-dark-400
       text-sm text-gray-700
       dark:text-gray-400
-      hover:text-primary hover:dark:text-primary`,
+      hover:text-primary-500 hover:dark:text-primary`,
   {
-    'active !border-primary dark:border-primary !text-primary dark:text-primary': active.value,
+    'active !border-primary dark:border-primary !text-primary-500 dark:text-primary': active.value,
   },
   { 'parent-active': isChildActive },
 ]))

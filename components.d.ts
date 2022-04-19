@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     AlgoliaSearchBox: typeof import('./.vitepress/theme/components/AlgoliaSearchBox.vue')['default']
+    AppButton: typeof import('./.vitepress/theme/components/pure/AppButton.vue')['default']
     AppLayout: typeof import('./.vitepress/theme/components/AppLayout.vue')['default']
     AppLogo: typeof import('./.vitepress/theme/components/AppLogo.vue')['default']
     'Bx:bxMoon': typeof import('~icons/bx/bx-moon')['default']
@@ -14,6 +15,7 @@ declare module 'vue' {
     DropdownLink: typeof import('./.vitepress/theme/components/DropdownLink.vue')['default']
     DropdownMenu: typeof import('./.vitepress/theme/components/DropdownMenu.vue')['default']
     'HeroiconsOutline:menuAlt2': typeof import('~icons/heroicons-outline/menu-alt2')['default']
+    HomeHero: typeof import('./.vitepress/theme/components/HomeHero.vue')['default']
     IconButton: typeof import('./.vitepress/theme/components/IconButton.vue')['default']
     IonIosSunny: typeof import('~icons/ion/ios-sunny')['default']
     NavLink: typeof import('./.vitepress/theme/components/NavLink.vue')['default']

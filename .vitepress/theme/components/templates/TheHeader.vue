@@ -20,7 +20,7 @@ const repo = useRepo()
       <div class="flex items-center order-last ml-2 lg:order-none lg:flex-1 lg:ml-4 xl:ml-10">
         <AlgoliaSearchBox :options="theme.algolia" />
       </div>
-      <div class="hidden lg:flex items-center flex-1">
+      <div class="hidden lg:flex items-center flex-1 flex-row-reverse">
         <DropdownMenu />
       </div>
       <div class="flex items-center lg:space-x-3 lg:pl-3 xl:pl-6">
