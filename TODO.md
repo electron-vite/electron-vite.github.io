@@ -3,10 +3,13 @@
 - [x] 替换图片为 svg 并且改进SVG
 - [x] 完成主题色选色
 - [x] 继续修改骨架确定大纲
-- [ ] doc-search 搜索 dark DocSearch-Form 无效问题
+- [x] doc-search 搜索 dark DocSearch-Form 无效问题
+- [x] 顶部栏对齐问题
 - [ ] right-sidebar 右侧栏
-- [ ] 顶部栏对齐问题
-
+- [ ] the play 页面
+- [ ] footer + license
+- [ ] 主页完整
+- [ ] doc-search 功能完成
 
 ## Menu
 
@@ -50,7 +53,12 @@
 
 ## plugin
 
-- Plugin                                 /plugin
+- Plugin                                 /plugin/
+  - Getting Started                      /plugin/
+  - vite-plugin-electron                 /plugin/vite-plugin-electron
+    - Configuration                      /plugin/vite-plugin-electron/configuration
+  - vite-plugin-resolve                  /plugin/vite-plugin-resolve
+    - Configuration                      /plugin/vite-plugin-resolve/configuration
 
 ## playground
 

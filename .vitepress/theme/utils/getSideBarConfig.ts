@@ -19,10 +19,9 @@ export function getSideBarConfig(
 ): DefaultTheme.SideBarConfig {
   if (isSideBarConfig(sidebar))
     return sidebar
-
   path = ensureStartingSlash(path)
-
-  for (const dir of Object.keys(sidebar)) {
+  const sidebarKeys = Object.keys(sidebar).sort((a, b) => b.length - a.length)
+  for (const dir of sidebarKeys) {
     // make sure the multi sidebar key starts with slash too
     if (path.startsWith(ensureStartingSlash(dir)))
       return sidebar[dir]

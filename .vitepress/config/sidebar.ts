@@ -1,13 +1,29 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = {
+  '/plugin': [
+    {
+      text: 'Guide',
+      children: [
+        { text: 'Getting Started', link: '/plugin/' },
+        {
+          text: 'vite-plugin-electron',
+          link: '/plugin/vite-plugin-electron',
+        },
+        {
+          text: 'vite-plugin-resolve',
+          link: '/plugin/vite-plugin-resolve',
+        },
+      ],
+    },
+  ],
   '/': [
     {
       text: 'Guide',
       children: [
         { text: 'Getting Started', link: '/guide/' },
         { text: 'Installation', link: '/guide/installation' },
-        { text: 'Configuration', link: '/guide/configuration' },
+        { text: 'Configuration', link: '/guide/configuration/' },
         { text: 'File Structure', link: '/guide/configuration/file-structure' },
         { text: 'Main Process', link: '/guide/configuration/main' },
         { text: 'Renderer Process', link: '/guide/configuration/renderer' },

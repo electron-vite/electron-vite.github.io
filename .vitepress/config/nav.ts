@@ -7,7 +7,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: 'Getting Started', link: '/guide/' },
       { text: 'Installation', link: '/guide/installation' },
 
-      { text: 'Configuration', link: '/guide/configuration' },
+      { text: 'Configuration', link: '/guide/configuration/' },
       { text: 'File Structure', link: '/guide/configuration/file-structure' },
       { text: 'Main Process', link: '/guide/configuration/main' },
       { text: 'Renderer Process', link: '/guide/configuration/renderer' },
@@ -43,7 +43,9 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: 'Plugin',
     items: [
-      { text: 'Plugin', link: '/plugin/' },
+      { text: 'Getting Started', link: '/plugin/' },
+      { text: 'vite-plugin-electron', link: '/plugin/vite-plugin-electron' },
+      { text: 'vite-plugin-resolve', link: '/plugin/vite-plugin-resolve' },
     ],
   },
   { text: 'Play', link: '/play' },

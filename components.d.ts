@@ -29,6 +29,7 @@ declare module 'vue' {
     TheHome: typeof import('./.vitepress/theme/components/templates/TheHome.vue')['default']
     TheLayout: typeof import('./.vitepress/theme/components/templates/TheLayout.vue')['default']
     ThePage: typeof import('./.vitepress/theme/components/templates/ThePage.vue')['default']
+    ThePlay: typeof import('./.vitepress/theme/components/templates/ThePlay.vue')['default']
     TheSidebar: typeof import('./.vitepress/theme/components/templates/TheSidebar.vue')['default']
     ToggleDark: typeof import('./.vitepress/theme/components/ToggleDark.vue')['default']
     ToggleSidebar: typeof import('./.vitepress/theme/components/ToggleSidebar.vue')['default']
