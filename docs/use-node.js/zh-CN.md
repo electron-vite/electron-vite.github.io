@@ -131,7 +131,7 @@ export default {
 
 <!-- vite-serve-main1.png -->
 ```js
-// /src/main.ts
+// Network:/src/main.ts
 
 import { ipcRenderer } from "/@fs/Users/atom/Desktop/github/electron-vite-boilerplate/node_modules/electron/index.js?v=2bd743f2";
 import fs from "/@id/__vite-browser-external:fs";
@@ -141,7 +141,7 @@ console.log(fs);
 
 <!-- vite-serve-electron1.png -->
 ```js
-// /@fs/Users/atom/Desktop/github/electron-vite-boilerplate/node_modules/electron/index.js?v=2bd743f2
+// Network:/@fs/Users/atom/Desktop/github/electron-vite-boilerplate/node_modules/electron/index.js?v=2bd743f2
 
 const fs = require('fs');
 const path = require('path');
@@ -168,7 +168,7 @@ module.exports = getElectronPath();
 
 <!-- vite-serve-fs1.png -->
 ```js
-// /@id/__vite-browser-external:fs
+// Network:/@id/__vite-browser-external:fs
 
 export default new Proxy({}, {
   get() {
@@ -298,7 +298,7 @@ console.log(ipcRenderer) // ▶ EventEmitter
 
 <!-- vite-serve-main2.png -->
 ```js
-// /src/main.ts
+// Network:/src/main.ts
 
 import { ipcRenderer } from "/@id/__x00__electron";
 console.log(ipcRenderer);
@@ -306,7 +306,7 @@ console.log(ipcRenderer);
 
 <!-- vite-serve-electron2.png -->
 ```js
-// /@id/__x00__electron
+// Network:/@id/__x00__electron
 
 const { ipcRenderer } = require('electron'); export { ipcRenderer }
 ```
