@@ -35,13 +35,45 @@ console.log(fs)
 
 运行得到如下错误
 
-<img src="../images/path.join.png" >
+<!-- path.join.png -->
+```log
+Uncaught TypeError: path.join is not a function
+    at node_modules/electron/index.js (index.js:4:23)
+    at __require (electron.js?v=1d44ed29:9:50)
+    at dep:electron:1:16
+```
 
 顺着报错我们用鼠标点击去查看
 
-<img src="../images/electron-path.png" >
+<!-- electron-path.png -->
+```js
+const fs = require('fs');
+const path = require('path');
 
-看上去不禁让人有些许费解，这里的 `const path = require('path');` 理应可以正常工作的，毕竟前面我们试过 `require('fs')` 可以正常使用。**但其实这是 sourcemap 映射出来的，并非运行时的真实代码。**
+const pathFile = path.join(__dirname, 'path.txt');
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+function getElectronPath () {
+  let executablePath;
+  if (fs.existsSync(pathFile)) {
+    executablePath = fs.readFileSync(pathFile, 'utf-8');
+  }
+  if (process.env.ELECTRON_OVERRIDE_DIST_PATH) {
+    return path.join(process.env.ELECTRON_OVERRIDE_DIST_PATH, executablePath || 'electron');
+  }
+  if (executablePath) {
+    return path.join(__dirname, 'dist', executablePath);
+  } else {
+    throw new Error('Electron failed to install correctly, please delete node_modules/electron and try installing again');
+  }
+}
+
+module.exports = getElectronPath();
+```
+
+看上去不禁让人有些许费解，这里的 `const path = require('path');` 理应可以正常工作的，毕竟前面我们试过 `require('fs')` 可以正常使用。其实这是 sourcemap 映射出来的源码，并非运行时的真实代码。
+
+其次 `electron` 属于 Electron 的内置模块。但 Vite 并不这么认为；还循规蹈矩的把 `node_modules/electron/index.js` 给翻出来了 :D
 
 #### 查看预构建
 
@@ -76,7 +108,7 @@ var require_electron = __commonJS({
 });
 ```
 
-代码有点多，我们这里只粘贴一部分说明问题即可。这里有个明显的问题 Vite(v2.9.9) 将 `path` 当成了 `browser-external:path` 模块，还对其进行了 polyfill；**已经不再是 Node.js 内置的那个 path 模块了。**
+代码有点多，我们这里只粘贴一部分说明问题即可。这里有个明显的问题 Vite(v2.9.9) 将 `path` 当成了 `browser-external:path` 模块，还对其进行了 polyfill；已经不再是 Node.js 内置的那个 path 模块了。
 
 #### 避开 Vite 预构建
 
@@ -95,24 +127,74 @@ export default {
 
 再次运行我们再看看 Vite 都干了哪些“好事”, 打开控制台的 Network 看看真实 GET 到的代码。
 
-<img src="../images/vite-serve-main1.png" >
-<img src="../images/vite-serve-electron1.png" >
-<img src="../images/vite-serve-fs1.png" >
+> 控制台 -> Network
 
-1. `electron` 返回了 `node_modules/elecctron/index.js` 这个路径文件，**不是我们想要的**
-2. `fs` 返回了 Vite 的 polyfill 代码，**不是我们想要的**
+<!-- vite-serve-main1.png -->
+```js
+// /src/main.ts
 
-不出意外控制台报错了：`does not provide an export named 'ipcRenderer'`
+import { ipcRenderer } from "/@fs/Users/atom/Desktop/github/electron-vite-boilerplate/node_modules/electron/index.js?v=2bd743f2";
+import fs from "/@id/__vite-browser-external:fs";
+console.log(ipcRenderer);
+console.log(fs);
+```
 
-<img src="../images/log-ipcRenderer1.png" >
+<!-- vite-serve-electron1.png -->
+```js
+// /@fs/Users/atom/Desktop/github/electron-vite-boilerplate/node_modules/electron/index.js?v=2bd743f2
 
-至此，看起来 Vite 好像没有什么配置给我们使用了，或者我们没法通过配置的方式告诉 Vite 如何正确的构建它们。
+const fs = require('fs');
+const path = require('path');
+
+const pathFile = path.join(__dirname, 'path.txt');
+
+function getElectronPath () {
+  let executablePath;
+  if (fs.existsSync(pathFile)) {
+    executablePath = fs.readFileSync(pathFile, 'utf-8');
+  }
+  if (process.env.ELECTRON_OVERRIDE_DIST_PATH) {
+    return path.join(process.env.ELECTRON_OVERRIDE_DIST_PATH, executablePath || 'electron');
+  }
+  if (executablePath) {
+    return path.join(__dirname, 'dist', executablePath);
+  } else {
+    throw new Error('Electron failed to install correctly, please delete node_modules/electron and try installing again');
+  }
+}
+
+module.exports = getElectronPath();
+```
+
+<!-- vite-serve-fs1.png -->
+```js
+// /@id/__vite-browser-external:fs
+
+export default new Proxy({}, {
+  get() {
+    throw new Error('Module "fs" has been externalized for browser compatibility and cannot be accessed in client code.')
+  }
+})
+```
+
+1. `electron` 返回了 `node_modules/elecctron/index.js` 这个路径文件，不是我们想要的。
+2. `fs` 返回了 Vite 的 polyfill 代码，不是我们想要的。
+
+不出意外控制台报错了
+
+<!-- <img src="../images/log-ipcRenderer1.png" > -->
+
+```log
+Uncaught SyntaxError: The requested module '/@fs/Users/atom/Desktop/github/electron-vite-boilerplate/node_modules/electron/index.js?v=8ab51fed' does not provide an export named 'ipcRenderer' (at main.ts:1:1)
+```
+
+至此，看起来 Vite 好像没有什么配置给我们使用了，或者我们 没法通过配置的方式告诉 Vite 如何正确的构建它们。
 
 #### import 与 require 协同
 
 回到最开始，我们使用了 `require()` 能够使得内置模块正常工作。由于 `import` 背后有 Vite 的处理反而给我们带来了许多的麻烦，那么我们能不能让 Vite 对待 `import` 也具有 `require()` 的行为呢？那样的话就能统筹兼顾两者的好处了。
 
-比如说还是原来的代码：
+比如有码如下：
 
 ```js
 // 设想流程
@@ -214,12 +296,27 @@ console.log(ipcRenderer) // ▶ EventEmitter
 
 转换后
 
-<img src="../images/vite-serve-main2.png" >
-<img src="../images/vite-serve-electron2.png" >
+<!-- vite-serve-main2.png -->
+```js
+// /src/main.ts
+
+import { ipcRenderer } from "/@id/__x00__electron";
+console.log(ipcRenderer);
+```
+
+<!-- vite-serve-electron2.png -->
+```js
+// /@id/__x00__electron
+
+const { ipcRenderer } = require('electron'); export { ipcRenderer }
+```
 
 控制台输出
 
-<img src="../images/log-ipcRenderer2.png" >
+<!-- log-ipcRenderer2.png -->
+```log
+▶ EventEmitter {_events: {…}, _eventsCount: 0, _maxListeners: undefined, send: ƒ, sendSync: ƒ, …}
+```
 
 **🎉 Good job!**
 
@@ -227,7 +324,12 @@ console.log(ipcRenderer) // ▶ EventEmitter
 
 ---
 
-> 早期版本(v2.8)还会出现下面的错误，错误原因都是 Vite 错误的加载了 `node_modules/elecctron/index.js` 这个路径文件的问题。
-<img src="../images/__dirname.png" >
+*早期版本(v2.8)还会出现下面的错误，错误原因都是 Vite 错误的加载了 `node_modules/elecctron/index.js` 这个路径文件的问题。*
+<!-- <img src="../images/__dirname.png" > -->
 
-
+```log
+Uncaught ReferenceError: __dirname is not defined
+    at node_modules/electron/index.js (index.js:4:28)
+    at __require (electron.js?v=1d44ed29:9:50)
+    at dep:electron:1:16
+```
