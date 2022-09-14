@@ -26,5 +26,13 @@
       "directory": ".vitepress"
     }
   ],
-  "windicss.sortOnSave": false
+  "windicss.sortOnSave": false,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/docs/*/meta.json"
+      ],
+      "url": "/docs/docs.schema.json"
+    }
+  ]
 }

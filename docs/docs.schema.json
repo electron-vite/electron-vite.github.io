@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "order": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string"
+    },
+    "website": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "link": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
