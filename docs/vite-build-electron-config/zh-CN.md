@@ -1,4 +1,4 @@
-## Vite 构建 Electron
+## Vite 构建 Electron 配置
 
 开门见山！讲清楚 `vite-plugin-electron` 实现之前我们必须知道 Vite 是如何构建 Electron 的。
 
@@ -127,33 +127,20 @@ export default {
 
 到现在我们已经有三个 Vite 的配置文件了。
 
-`vite.main.ts` Main
-`vite.config.ts` Renderer
-`vite.preload.ts` Preload
+1. `vite.main.ts` Main
+2. `vite.config.ts` Renderer
+3. `vite.preload.ts` Preload
 
-同时运行他们有很办法，比如说在 package.json 分别配置三个命令，然后最后由一个命令串行执行三个命令。不过有着“很强的动手能力”的我们这里选择用 Vite 提供的 NodeJs API 执行构建。
-
-在根目录下新建 `scripts/build.mjs` 添加构建脚本。
-
-```diff
-+ ├─┬ scripts
-+ │ ├── build.mjs
-```
-
-```js
-import { build } from 'vite'
-
-await build({ configFile: 'vite.main.ts' })
-await build({ configFile: 'vite.config.ts' })
-await build({ configFile: 'vite.preload.ts' })
-```
-
-在 package.json 中添加如下命令
+在 package.json 中添加对应的构建命令，并汇总到一个 `build` 命令中
 
 ```json
 {
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build:main": "vite build -c vite.main.ts",
+    "build:renderer": "vite build -c vite.config.ts",
+    "build:preload": "vite build -c vite.preload.ts",
+    "//": "---------------- 汇总命令 ----------------",
+    "build": "npm run build:main && npm run build:renderer && npm run build:preload"
   }
 }
 ```
