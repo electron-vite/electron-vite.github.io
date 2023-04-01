@@ -1,18 +1,34 @@
-import type { DefaultTheme } from 'vitepress'
-import { defineConfigWithTheme } from 'vitepress'
-import { metaData } from './config/constants'
-import head from './config/head'
-import themeConfig from './config/themeConfig'
-import { mdRenderFilename } from './config/markdown'
+import { defineConfig } from 'vitepress'
 
-export default defineConfigWithTheme<DefaultTheme.Config>({
-  title: metaData.title,
-  description: metaData.description,
-  head,
-  themeConfig,
-  markdown: {
-    config(md) {
-      md.use(mdRenderFilename)
-    },
-  },
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+  title: "Electron ⚡️ Vite",
+  description: "Creating desktop programs using Electron and vite",
+  themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
+    nav: [
+      { text: 'Guide', link: '/Guide/what-is-electronVite' },
+    ],
+
+    sidebar: [
+      {
+        text: 'Introduction',
+        collapsed: false,
+        items: [
+          { text: 'what is electron vite', link: '/Guide/what-is-electronVite' },
+        ]
+      },
+      {
+        text: 'Community',
+        collapsed: false,
+        items: [
+          { text: 'Acknowledge', link: '/Community/Acknowledge' },
+        ]
+      }
+    ],
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+    ]
+  }
 })

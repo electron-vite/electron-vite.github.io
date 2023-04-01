@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "@oceanlvr",
-    "plugin:markdown/recommended"
-  ],
-  "ignorePatterns": [
-    ".github"
-  ]
-}

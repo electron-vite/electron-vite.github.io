@@ -1,4 +1,0 @@
-<template>
-  <TheLayout />
-  <Debug />
-</template>
