@@ -1,54 +1,10 @@
 {
-  "name": "electron-vite-boilerplate-docs",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [
-    "electron",
-    "vite",
-    "docs",
-    "boilerplate",
-    "vitepress"
-  ],
-  "license": "ISC",
-  "author": "oceanlvr",
-  "main": "index.js",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vue-tsc --noEmit && vitepress build",
-    "serve": "vitepress serve",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "crawl": "docker run --rm -it --env-file=.algolia/.env -e \"CONFIG=$(cat .algolia/config.json | jq -r tostring)\" algolia/docsearch-scraper"
-  },
-  "engines": {
-    "node": ">=14"
-  },
-  "dependencies": {
-    "@docsearch/css": "^3.0.0",
-    "@docsearch/js": "^3.0.0",
-    "@vueuse/core": "^8.2.6",
-    "preact": "^10.7.1",
-    "vue": "^3.2.31"
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.28",
-    "@oceanlvr/eslint-config": "0.19.6-beta",
-    "@tailwindcss/typography": "^0.5.2",
-    "@types/markdown-it": "^12.2.3",
-    "@types/node": "^17.0.23",
-    "@vitejs/plugin-vue": "^2.3.1",
-    "autoprefixer": "^10.4.4",
-    "eslint": "^8.12.0",
-    "markdown-it": "^12.3.2",
-    "netlify-cli": "^9.16.6",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.23",
-    "typescript": "^4.6.3",
-    "unplugin-icons": "^0.14.1",
-    "unplugin-vue-components": "^0.18.5",
-    "vite": "^2.9.1",
-    "vite-plugin-restart": "^0.1.1",
-    "vitepress": "^0.22.3",
-    "vue-tsc": "^0.34.7"
+    "vitepress": "^1.0.0-alpha.64"
   }
 }
