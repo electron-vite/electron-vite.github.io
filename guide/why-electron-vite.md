@@ -1,2 +1,2 @@
-# why-electronVite
+# Why Electron Vite
 
