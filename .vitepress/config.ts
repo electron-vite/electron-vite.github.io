@@ -7,7 +7,19 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Guide', link: '/Guide/what-is-electronVite' },
+      { text: 'Guide', link: '/guide/why-electron-vite' },
+      {
+        text: 'Template', items: [
+          {
+            text: 'electron-vite-vue',
+            link: 'https://github.com/electron-vite/electron-vite-vue'
+          },
+          {
+            text: 'electron-vite-react',
+            link: 'https://github.com/electron-vite/electron-vite-react'
+          }
+        ]
+      },
     ],
 
     sidebar: [
@@ -15,20 +27,46 @@ export default defineConfig({
         text: 'Introduction',
         collapsed: false,
         items: [
-          { text: 'what is electron vite', link: '/Guide/what-is-electronVite' },
+          { text: 'Why Electron Vite', link: '/guide/why-electron-vite' },
+          { text: 'Getting Started', link: '/guide/getting-started' },
+        ]
+      },
+      {
+        text: 'Plugin',
+        collapsed: false,
+        items: [
+          { text: 'Vite-plugin-electron', link: '/plugin/vite-plugin-electron' },
+          { text: 'Vite-plugin-electron-renderer', link: '/plugin/vite-plugin-electron-renderer' },
+        ]
+      },
+      { 
+        text: 'Electron Builder',
+        collapsed: false,
+        items: [
+          { text: 'electron-builder.json5', link: '/electron-builder/electron-builder.json5' },
+        ]
+      },
+      {
+        text: 'FAQ & Troubleshooting',
+        collapsed: false,
+        items: [
+          { text: 'Troubleshooting', link: '/FAQ/issue' },
         ]
       },
       {
         text: 'Community',
         collapsed: false,
         items: [
-          { text: 'Acknowledge', link: '/Community/Acknowledge' },
+          { text: 'Team', link: '/community/team' },
+          { text: 'Acknowledge', link: '/community/development-contribution' },
+          { text: 'Development and Contribution', link: '/community/acknowledge' },
+         
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/electron-vite' }
     ]
   }
 })
