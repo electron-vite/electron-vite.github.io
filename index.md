@@ -7,7 +7,7 @@ hero:
   tagline: Creating desktop programs using Electron and vite
   image:
     src: /assets/electron-vite.svg
-    alt: VitePress
+    alt: electron-vite
 
   actions:
     - theme: brand

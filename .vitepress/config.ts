@@ -40,10 +40,10 @@ export default defineConfig({
         ]
       },
       { 
-        text: 'Electron Builder',
+        text: 'Build',
         collapsed: false,
         items: [
-          { text: 'electron-builder.json5', link: '/electron-builder/electron-builder.json5' },
+          { text: 'electron-builder.json5', link: '/build/electron-builder.json5' },
         ]
       },
       {
