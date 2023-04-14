@@ -4,8 +4,19 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Electron ⚡️ Vite",
   description: "Creating desktop programs using Electron and vite",
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/electron-vite.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: 'electron-vite.png' }],
+
+    [
+      'meta',
+      { name: 'electron-vite', content: 'Creating desktop programs using Electron and vite' },
+    ],
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/electron-vite.svg',
     nav: [
       { text: 'Guide', link: '/guide/why-electron-vite' },
       {
@@ -21,7 +32,6 @@ export default defineConfig({
         ]
       },
     ],
-
     sidebar: [
       {
         text: 'Introduction',
@@ -39,11 +49,11 @@ export default defineConfig({
           { text: 'Vite-plugin-electron-renderer', link: '/plugin/vite-plugin-electron-renderer' },
         ]
       },
-      { 
-        text: 'Electron Builder',
+      {
+        text: 'Build',
         collapsed: false,
         items: [
-          { text: 'electron-builder.json5', link: '/electron-builder/electron-builder.json5' },
+          { text: 'electron-builder', link: '/build/electron-builder' },
         ]
       },
       {
@@ -60,7 +70,7 @@ export default defineConfig({
           { text: 'Team', link: '/community/team' },
           { text: 'Acknowledge', link: '/community/development-contribution' },
           { text: 'Development and Contribution', link: '/community/acknowledge' },
-         
+
         ]
       }
     ],
