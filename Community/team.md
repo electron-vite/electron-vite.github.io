@@ -10,13 +10,19 @@ const members = [
       { icon: 'github', link: 'https://github.com/caoxiemeihao' },
       { icon: 'github', link: 'https://github.com/sponsors/caoxiemeihao' },
     ]
-  },
-  {
+  },{
     avatar: 'https://github.com/astoilkov.png',
     name: 'Antonio Stoilkov',
     title: 'Developer',
     links: [
       { icon: 'github', link: 'https://github.com/astoilkov' },
+    ]
+  },{
+    avatar: 'https://github.com/bluwy.png',
+    name: 'Bjorn Lu',
+    title: 'Developer',
+    links: [
+      { icon: 'github', link: 'https://github.com/bluwy' },
     ]
   },
     {
@@ -44,16 +50,16 @@ const members = [
     ]
   },
     {
-    avatar: 'https://github.com/Paul.png',
-    name: 'PAXANDDOS',
+    avatar: 'https://github.com/PAXANDDOS.png',
+    name: 'Paul',
     title: 'Developer',
     links: [
-      { icon: 'github', link: 'https://github.com/Paul' },
+      { icon: 'github', link: 'https://github.com/PAXANDDOS' },
     ]
   },
     {
     avatar: 'https://github.com/RSS1102.png',
-    name: 'Jimmy',
+    name: '阿菜 Cai',
     title: 'Developer',
     links: [
       { icon: 'github', link: 'https://github.com/RSS1102' },
@@ -74,16 +80,7 @@ const members = [
     links: [
       { icon: 'github', link: 'https://github.com/watonyweng' },
     ]
-  },
-      {
-    avatar: 'https://github.com/caoxiemeihao.png',
-    name: '草鞋没号',
-    title: 'Developer',
-    links: [
-      { icon: 'github', link: 'https://github.com/caoxiemeihao' },
-    ]
-  },
-      {
+  }, {
     avatar: 'https://github.com/xhayper.png',
     name: 'hayper',
     title: 'Developer',
