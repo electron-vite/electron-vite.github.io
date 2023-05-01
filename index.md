@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/why-electron-vite
+      link: /Guide/why-electron-vite
     - theme: alt
       text: View on GitHub
       link: https://github.com/electron-vite`
