@@ -70,7 +70,7 @@ export default defineConfig({
         text: 'Troubleshooting',
         collapsed: false,
         items: [
-          { text: '-', link: '/Troubleshooting/-' },
+          { text: 'PackagingStaticResource', link: '/Troubleshooting/PackagingStaticResource' },
         ]
       },
       {
