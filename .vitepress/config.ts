@@ -72,7 +72,7 @@ export default defineConfig({
         text: 'Troubleshooting',
         collapsed: false,
         items: [
-          
+          { text: 'Issue', link: '/Troubleshooting/Issue' },
         ]
       },
       {
