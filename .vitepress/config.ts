@@ -57,6 +57,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'electron-builder', link: '/Build/electron-builder' },
+          { text: 'PackagingStaticResource', link: '/Build/PackagingStaticResource' },
         ]
       },
       {
@@ -64,13 +65,14 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'RenderingProcessNodejs', link: '/Electron/RenderingProcessNodejs' },
+          { text: 'MultipleProgramsAndWindows', link: '/Electron/MultipleProgramsAndWindows' },
         ]
       },
       {
         text: 'Troubleshooting',
         collapsed: false,
         items: [
-          { text: 'PackagingStaticResource', link: '/Troubleshooting/PackagingStaticResource' },
+ 
         ]
       },
       {
