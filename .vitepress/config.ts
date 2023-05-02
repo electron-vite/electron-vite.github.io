@@ -56,7 +56,7 @@ export default defineConfig({
         text: 'Build',
         collapsed: false,
         items: [
-          { text: 'electron-builder', link: '/Build/electron-builder' },
+          { text: 'Electron-builder', link: '/Build/Electron-builder' },
           { text: 'PackagingStaticResource', link: '/Build/PackagingStaticResource' },
         ]
       },
@@ -72,7 +72,7 @@ export default defineConfig({
         text: 'Troubleshooting',
         collapsed: false,
         items: [
- 
+          
         ]
       },
       {

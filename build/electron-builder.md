@@ -13,6 +13,7 @@ The templates currently used are packaged and built using [electron-builder](htt
 {
   "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
   "appId": "YourAppID",
+  "productName":"YourAppName",
   "asar": true,
   "directories": {
     "output": "release/${version}"
@@ -79,6 +80,19 @@ The unique identifier of an application.
   </summary>
   应用程序的唯一标识符。
  <li>通常是一个反向域名（例如：com.example.myapp）。在发布应用程序时，您需要在包的名称和 ID 中使用相同的值。</li>
+</details>
+
+---
+
+#### productName
+
+The name of the application.
+
+<details>
+  <summary>
+  中文
+  </summary>
+  应用程序的名称。
 </details>
 
 ---
