@@ -37,42 +37,51 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: 'Introduction',
+        text: 'Guide',
         collapsed: false,
         items: [
-          { text: 'Why Electron Vite', link: '/guide/why-electron-vite' },
-          { text: 'Getting Started', link: '/guide/getting-started' },
+          { text: 'Why Electron Vite', link: '/Guide/why-electron-vite' },
+          { text: 'Getting Started', link: '/Guide/getting-started' },
         ]
       },
       {
         text: 'Plugin',
         collapsed: false,
         items: [
-          { text: 'Vite-plugin-electron', link: '/plugin/vite-plugin-electron' },
-          { text: 'Vite-plugin-electron-renderer', link: '/plugin/vite-plugin-electron-renderer' },
+          { text: 'Vite-plugin-electron', link: '/Plugin/vite-plugin-electron' },
+          { text: 'Vite-plugin-electron-renderer', link: '/Plugin/vite-plugin-electron-renderer' },
         ]
       },
       {
         text: 'Build',
         collapsed: false,
         items: [
-          { text: 'electron-builder', link: '/build/electron-builder' },
+          { text: 'Electron-builder', link: '/Build/Electron-builder' },
+          { text: 'PackagingStaticResource', link: '/Build/PackagingStaticResource' },
         ]
       },
       {
-        text: 'FAQ & Troubleshooting',
+        text: 'Electron',
         collapsed: false,
         items: [
-          { text: 'Troubleshooting', link: '/FAQ/issue' },
+          { text: 'RenderingProcessNodejs', link: '/Electron/RenderingProcessNodejs' },
+          { text: 'MultipleProgramsAndWindows', link: '/Electron/MultipleProgramsAndWindows' },
+        ]
+      },
+      {
+        text: 'Troubleshooting',
+        collapsed: false,
+        items: [
+          { text: 'Issue', link: '/Troubleshooting/Issue' },
         ]
       },
       {
         text: 'Community',
         collapsed: false,
         items: [
-          { text: 'Team', link: '/community/team' },
-          { text: 'Acknowledge', link: '/community/development-contribution' },
-          { text: 'Development and Contribution', link: '/community/acknowledge' },
+          { text: 'Team', link: '/Community/team' },
+          { text: 'Acknowledge', link: '/Community/development-contribution' },
+          { text: 'Development and Contribution', link: '/Community/acknowledge' },
 
         ]
       }
