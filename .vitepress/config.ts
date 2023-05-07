@@ -64,8 +64,8 @@ export default defineConfig({
         text: 'Electron',
         collapsed: false,
         items: [
-          { text: 'RenderingProcessNodejs', link: '/Electron/RenderingProcessNodejs' },
-          { text: 'MultipleProgramsAndWindows', link: '/Electron/MultipleProgramsAndWindows' },
+          { text: 'Render Process Use Nodejs', link: '/Electron/RenderProcessUseNodejs' },
+          { text: 'Multiple Programs Windows', link: '/Electron/MultipleProgramsWindows' },
         ]
       },
       {
