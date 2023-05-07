@@ -80,9 +80,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Team', link: '/Community/team' },
-          { text: 'Acknowledge', link: '/Community/development-contribution' },
-          { text: 'Development and Contribution', link: '/Community/acknowledge' },
-
+          { text: 'Development And Contribution', link: '/Community/development-contribution' },
+          { text: 'Acknowledge', link: '/Community/acknowledge' },
         ]
       }
     ],
