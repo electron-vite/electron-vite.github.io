@@ -64,8 +64,8 @@ export default defineConfig({
         text: 'Electron',
         collapsed: false,
         items: [
-          { text: 'RenderingProcessNodejs', link: '/Electron/RenderingProcessNodejs' },
-          { text: 'MultipleProgramsAndWindows', link: '/Electron/MultipleProgramsAndWindows' },
+          { text: 'Render Process Use Nodejs', link: '/Electron/RenderProcessUseNodejs' },
+          { text: 'Multiple Programs Windows', link: '/Electron/MultipleProgramsWindows' },
         ]
       },
       {
@@ -80,9 +80,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Team', link: '/Community/team' },
-          { text: 'Acknowledge', link: '/Community/development-contribution' },
-          { text: 'Development and Contribution', link: '/Community/acknowledge' },
-
+          { text: 'Development And Contribution', link: '/Community/development-contribution' },
+          { text: 'Acknowledge', link: '/Community/acknowledge' },
         ]
       }
     ],
