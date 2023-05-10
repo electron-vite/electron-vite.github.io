@@ -1,38 +1,6 @@
 {
   "cSpell.words": [
-    "attributify",
-    "codemirror",
-    "composables",
-    "demi",
-    "docsearch",
-    "hljs",
-    "prismjs",
-    "splitpanes",
-    "vite",
-    "vitepress",
-    "vitest"
-  ],
-  "eslint.packageManager": "yarn",
-  "prettier.enable": false,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false
-  },
-  "files.associations": {
-    "*.css": "postcss"
-  },
-  "eslint.workingDirectories": [
-    {
-      "directory": ".vitepress"
-    }
-  ],
-  "windicss.sortOnSave": false,
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "/docs/*/meta.json"
-      ],
-      "url": "/docs/docs.schema.json"
-    }
+    "Preact",
+    "vitepress"
   ]
 }

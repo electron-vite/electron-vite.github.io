@@ -5,3 +5,10 @@ node_modules
 
 # Local Netlify folder
 .netlify
+
+package-lock.json
+# pnpm-lock.yaml
+yarn.lock
+
+# dist
+cache
