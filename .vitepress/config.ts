@@ -50,31 +50,31 @@ export default defineConfig({
         text: 'Plugin',
         collapsed: false,
         items: [
-          { text: 'Vite-plugin-electron', link: '/Plugin/vite-plugin-electron' },
-          { text: 'Vite-plugin-electron-renderer', link: '/Plugin/vite-plugin-electron-renderer' },
+          { text: 'Vite Plugin Electron', link: '/Plugin/vite-plugin-electron' },
+          { text: 'Vite Plugin Electron-renderer', link: '/Plugin/vite-plugin-electron-renderer' },
         ]
       },
       {
         text: 'Build',
         collapsed: false,
         items: [
-          { text: 'Electron-builder', link: '/Build/Electron-builder' },
-          { text: 'PackagingStaticResource', link: '/Build/PackagingStaticResource' },
+          { text: 'Electron Builder', link: '/Build/electron-builder' },
+          { text: 'Packaging Static Resource', link: '/Build/packaging-static-resource' },
         ]
       },
       {
         text: 'Electron',
         collapsed: false,
         items: [
-          { text: 'Render Process Use Nodejs', link: '/Electron/RenderProcessUseNodejs' },
-          { text: 'Multiple Programs Windows', link: '/Electron/MultipleProgramsWindows' },
+          { text: 'Render Process Use Nodejs', link: '/Electron/render-process-use-nodejs' },
+          { text: 'Multiple Programs Windows', link: '/Electron/multiple-programs-windows' },
         ]
       },
       {
         text: 'Troubleshooting',
         collapsed: false,
         items: [
-          { text: 'Issue', link: '/Troubleshooting/Issue' },
+          { text: 'Issue', link: '/Troubleshooting/issue' },
         ]
       },
       {
