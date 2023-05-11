@@ -2,8 +2,8 @@
 
 ## Directory
 
-- [MultipleEnv](./Issue.html#multipleenv)
-- [Dependency Pre-Bundling](./Issue.html#dependency-pre-bundling)
+- [MultipleEnv](./issue.html#multipleenv)
+- [Dependency Pre-Bundling](./issue.html#dependency-pre-bundling)
 
 ## MultipleEnv
 
@@ -11,7 +11,7 @@ Using [vite Env Variables](https://vitejs.dev/guide/env-and-mode.html#env-variab
 
 ###### .env file
 
-```js
+```ts
 VITE_TEST_STRING=vite-test-env
 VITE_TEST_NUMVER=123
 VITE_TEST_BOOLEAN=true

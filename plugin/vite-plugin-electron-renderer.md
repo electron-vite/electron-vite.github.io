@@ -13,7 +13,7 @@ npm i vite-plugin-electron-renderer -D
 
 1. This just modifies some of Vite's default config to make the Renderer process works.
 
-```js
+```ts
 import renderer from 'vite-plugin-electron-renderer'
 
 export default {
