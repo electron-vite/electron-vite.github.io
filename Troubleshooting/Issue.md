@@ -11,7 +11,7 @@ Using [vite Env Variables](https://vitejs.dev/guide/env-and-mode.html#env-variab
 
 ###### .env file
 
-```.env
+```js
 VITE_TEST_STRING=vite-test-env
 VITE_TEST_NUMVER=123
 VITE_TEST_BOOLEAN=true
