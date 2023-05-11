@@ -42,48 +42,48 @@ export default defineConfig({
         text: 'Guide',
         collapsed: false,
         items: [
-          { text: 'Why Electron Vite', link: '/Guide/why-electron-vite' },
-          { text: 'Getting Started', link: '/Guide/getting-started' },
+          { text: 'Why Electron Vite', link: '/guide/why-electron-vite' },
+          { text: 'Getting Started', link: '/guide/getting-started' },
         ]
       },
       {
         text: 'Plugin',
         collapsed: false,
         items: [
-          { text: 'Vite Plugin Electron', link: '/Plugin/vite-plugin-electron' },
-          { text: 'Vite Plugin Electron-renderer', link: '/Plugin/vite-plugin-electron-renderer' },
+          { text: 'Vite Plugin Electron', link: '/plugin/vite-plugin-electron' },
+          { text: 'Vite Plugin Electron-renderer', link: '/plugin/vite-plugin-electron-renderer' },
         ]
       },
       {
         text: 'Build',
         collapsed: false,
         items: [
-          { text: 'Electron Builder', link: '/Build/electron-builder' },
-          { text: 'Packaging Static Resource', link: '/Build/packaging-static-resource' },
+          { text: 'Electron Builder', link: '/build/electron-builder' },
+          { text: 'Packaging Static Resource', link: '/build/packaging-static-resource' },
         ]
       },
       {
         text: 'Electron',
         collapsed: false,
         items: [
-          { text: 'Render Process Use Nodejs', link: '/Electron/render-process-use-nodejs' },
-          { text: 'Multiple Programs Windows', link: '/Electron/multiple-programs-windows' },
+          { text: 'Render Process Use Nodejs', link: '/electron-about/render-process-use-nodejs' },
+          { text: 'Multiple Programs Windows', link: '/electron-about/multiple-programs-windows' },
         ]
       },
       {
         text: 'Troubleshooting',
         collapsed: false,
         items: [
-          { text: 'Issue', link: '/Troubleshooting/issue' },
+          { text: 'Issue', link: '/trouble-shooting/issue' },
         ]
       },
       {
         text: 'Community',
         collapsed: false,
         items: [
-          { text: 'Team', link: '/Community/team' },
-          { text: 'Development And Contribution', link: '/Community/development-contribution' },
-          { text: 'Acknowledge', link: '/Community/acknowledge' },
+          { text: 'Team', link: '/community-awesome/team' },
+          { text: 'Development And Contribution', link: '/community-awesome/development-and-contribution' },
+          { text: 'Acknowledge', link: '/community-awesome/acknowledge' },
         ]
       }
     ],
