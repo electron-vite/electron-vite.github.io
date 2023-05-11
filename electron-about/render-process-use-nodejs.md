@@ -1,6 +1,6 @@
 # Rendering Process Nodejs
 
-### Control whether the rendering process has the ability of Node.js
+## Control whether the rendering process has the ability of Node.js
 
 In Electron, the `nodeIntegration` and `nodeIntegrationInSubFrames` options can be used to control whether the rendering process has the ability of Node.js.
 

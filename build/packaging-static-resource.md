@@ -20,7 +20,7 @@ The same as extraResources but copy into the app’s content directory (`Content
 
 [public](https://vitejs.dev/guide/assets.html#the-public-directory) `<root>/public`
 
-For example, dynamically introduced <Badge type="tip">img/html/txt/js/ts/fonts</Badge>  etc.
+For example, dynamically introduced `img/html/txt/js/ts/fonts`  etc.
 
 Directory to serve as plain static assets. Files in this directory are served at / during dev and copied to the root of outDir during build, and are always served or copied as-is without transform. The value can be either an absolute file system path or a path relative to project root.
 
