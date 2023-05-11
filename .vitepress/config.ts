@@ -17,6 +17,8 @@ export default defineConfig({
     lineNumbers:true,
   },
 
+  base: '/docs/',
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/electron-vite.svg',
