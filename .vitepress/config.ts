@@ -13,10 +13,9 @@ export default defineConfig({
       { name: 'electron-vite', content: 'Creating desktop programs using Electron and vite' },
     ],
   ],
-  markdown:{
-    lineNumbers:true,
+  markdown: {
+    lineNumbers: true,
   },
-
   base: '/docs/',
 
   themeConfig: {
@@ -89,6 +88,14 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/electron-vite' }
-    ]
+    ],
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'MHLM0MHOBZ',
+        apiKey: '9d4e29b666484f54feafbef08cac6754',
+        indexName: 'electron-viteio'
+    }
+    }
   }
 })

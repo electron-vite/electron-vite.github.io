@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Electron ⚡️ Vite"
-  tagline: Creating desktop programs using Electron and vite
+  tagline: Creating desktop programs using Electron and Vite
   image:
     src: /electron-vite.svg
     alt: electron-vite
