@@ -7,7 +7,7 @@ hero:
   name: "Electron⚡️Vite"
   tagline: Create desktop applications using Electron and Vite
   image:
-    src: /electron-vite.svg
+    src: /electron-vite.electron.svg
     alt: electron-vite
 
   actions:
