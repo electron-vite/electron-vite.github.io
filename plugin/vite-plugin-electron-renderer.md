@@ -81,28 +81,28 @@ export interface RendererOptions {
 > Load Electron and Node.js cjs-packages/builtin-modules (Schematic)
 
 ```
- ┏————————————————————————————————————————┓                 ┏—————————————————┓
- │ import { ipcRenderer } from 'electron' │                 │ Vite dev server │
- ┗————————————————————————————————————————┛                 ┗—————————————————┛
-                 │                                                   │
-                 │ 1. Pre-Bundling electron module into              │
-                 │    node_modules/.vite-electron-renderer/electron  │
-                 │                                                   │
-                 │ 2. HTTP(Request): electron module                 │
-                 │ ————————————————————————————————————————————————> │
-                 │                                                   │
-                 │ 3. Alias redirects to                             │
-                 │    node_modules/.vite-electron-renderer/electron  │
-                 │    ↓                                              │
-                 │    const { ipcRenderer } = require('electron')    │
-                 │    export { ipcRenderer }                         │
-                 │                                                   │
-                 │ 4. HTTP(Response): electron module                │
-                 │ <———————————————————————————————————————————————— │
-                 │                                                   │
- ┏————————————————————————————————————————┓                 ┏—————————————————┓
- │ import { ipcRenderer } from 'electron' │                 │ Vite dev server │
- ┗————————————————————————————————————————┛                 ┗—————————————————┛
+┏————————————————————————————————————————┓          ┏—————————————————┓
+│ import { ipcRenderer } from 'electron' │          │ Vite dev server │
+┗————————————————————————————————————————┛          ┗—————————————————┛
+         │                                                   │
+         │ 1. Pre-Bundling electron module into              │
+         │    node_modules/.vite-electron-renderer/electron  │
+         │                                                   │
+         │ 2. HTTP(Request): electron module                 │
+         │ ————————————————————————————————————————————————> │
+         │                                                   │
+         │ 3. Alias redirects to                             │
+         │    node_modules/.vite-electron-renderer/electron  │
+         │    ↓                                              │
+         │    const { ipcRenderer } = require('electron')    │
+         │    export { ipcRenderer }                         │
+         │                                                   │
+         │ 4. HTTP(Response): electron module                │
+         │ <———————————————————————————————————————————————— │
+         │                                                   │
+┏————————————————————————————————————————┓          ┏—————————————————┓
+│ import { ipcRenderer } from 'electron' │          │ Vite dev server │
+┗————————————————————————————————————————┛          ┗—————————————————┛
 ```
 
 ## `dependencies` vs `devDependencies`

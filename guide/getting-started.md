@@ -1,8 +1,8 @@
 # Getting Started
 
-## Quick Experience
+## Quick Start
 
-We provide an out of the box integrated template 🚀, that you can clone locally through Git for quick use.
+We provide some out-of-the-box templates 🚀, and you can clone they to locally through Git for quick start.
 
 ##### electron-vite-vue
 
