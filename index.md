@@ -42,6 +42,3 @@ features:
 
 ---
 
-<template>
-  <span>asdfsd</span>
-</template>
