@@ -16,7 +16,7 @@ The docs are based on the docs from the `main` branch. Updates committed to the 
 
 ## How to Contribute to Documentation
 
-If you have any questions or ideas about the document, or if you are unsure of what you should do, you can submit an [`issue`](https://github.com/electron-vite/docs/issues) and have a discussion with the author.
+If you have any questions or ideas about the document, or if you are unsure of what you should do, you can submit an [`issue`](https://github.com/electron-vite/electron-vite.github.io/issues) and have a discussion with the author.
 
 - `[bug]`:There are any errors in the document.
 
