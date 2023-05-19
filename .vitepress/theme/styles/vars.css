@@ -1,45 +1,11 @@
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .VPHero .image-bg {
-  width: 220px;
-  height: 220px;
-}
-
-.VPHero .image-bg::before,
-.VPHero .image-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.VPHero .image-bg::before {
   background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  width: 240px;
+  height: 240px;
   filter: blur(60px);
 }
 
-.VPHero .image-bg::after {
-  background-image: url(/electron-vite.vite.svg);
-  background-size: contain;
-}
-
 .VPHero .image-src {
-  width: 220px;
-  height: 220px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  animation: logo-spin infinite 20s linear;
+  width: 240px;
+  height: 240px;
 }
