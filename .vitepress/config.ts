@@ -16,7 +16,6 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
   },
-  base: '/docs/',
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
