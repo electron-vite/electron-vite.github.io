@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Electron ⚡️ Vite",
+  title: "Electron⚡️Vite",
   description: "Creating desktop programs using Electron and vite",
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/electron-vite.svg' }],
@@ -41,7 +41,7 @@ export default defineConfig({
         text: 'Guide',
         collapsed: false,
         items: [
-          { text: 'Why Electron Vite', link: '/guide/why-electron-vite' },
+          { text: 'Why Electron⚡️Vite', link: '/guide/why-electron-vite' },
           { text: 'Getting Started', link: '/guide/getting-started' },
         ]
       },
@@ -87,15 +87,17 @@ export default defineConfig({
     ],
 
     socialLinks: [
+      { icon: 'discord', link: 'https://discord.gg/sRqjYpEAUK' },
       { icon: 'github', link: 'https://github.com/electron-vite' }
     ],
+    // @ts-ignore
     search: {
       provider: 'algolia',
       options: {
         appId: 'MHLM0MHOBZ',
         apiKey: '9d4e29b666484f54feafbef08cac6754',
         indexName: 'electron-viteio'
-    }
+      }
     }
   }
 })
