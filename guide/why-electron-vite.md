@@ -13,7 +13,7 @@
 
 Vite's ecosystem and community are exploding - as [patak](https://github.com/patak-dev) describes Vite in his Github home page.
 
-At the same time, Electron-Vite is a Vite is a very important part of the [Electron](https://www.electronjs.org/) and [Vite](https://vitejs.dev/) community ecosystem, and is meant to provide a complete, simple, out-of-the-box Electron development experience based on Vite.
+At the same time, Electron-Vite a Vite is a very important part of the [Electron](https://www.electronjs.org/) and [Vite](https://vitejs.dev/) community ecosystem, and is meant to provide a complete, simple, out-of-the-box Electron development experience based on Vite.
 
 <details>
   <summary>
