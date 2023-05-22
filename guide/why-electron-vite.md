@@ -27,13 +27,15 @@ Vite 的生态系统和社区正在爆炸式增长 - 正如 <a href="https://git
 ## Features
 
 - 📦 Out of the box
-- 🔥 Hot restart, HMR
-- 💪 Full Electron's Main process, Renderer process, Preload scripts support
-- 🎯 Based on the Vite's official template - Vue, React, Vanilla
+- 🔥 Hot restart - Main process
+- ⏱ HMR - Renderer process
+- ⭕️ Hot reload - Preload script
+- 💪 Full Node.js API supported in Main process, Renderer process, Preload script
+- 🎯 Based on the Vite's official templates - Vue, React, Vanilla
 
 ## Introductions
 
-Whether you want to build an Electron application quickly or want to optimize an existing one, this project is a good choice. It's very easy to configure and also provides a lot of very useful features such as: hot reloading of main and rendering processes, Debug in development environments, support for C/C++ Native addons, etc. It also provides support for Vue / React frameworks. It makes developing Electron much easier and faster - [BlackHole1@electron](https://github.com/BlackHole1)
+Whether you want to build an Electron application quickly or want to optimize an existing one, this project is a good choice. It's very easy to configure and also provides a lot of very useful features such as Main process **Hot-restart**, Renderer process **HMR**, Debug in development environments, support for C/C++ Native addons, etc. It also provides support for Vue / React frameworks. It makes developing Electron much easier and faster - [BlackHole1@electron](https://github.com/BlackHole1)
 
 <details>
   <summary>
