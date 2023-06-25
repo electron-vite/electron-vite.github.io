@@ -42,14 +42,9 @@ export default defineConfig({
         items: [
           { text: 'Why Electron⚡️Vite', link: '/guide/why-electron-vite' },
           { text: 'Getting Started', link: '/guide/getting-started' },
-        ]
-      },
-      {
-        text: 'Plugin',
-        collapsed: false,
-        items: [
-          { text: 'Vite Plugin Electron', link: '/plugin/vite-plugin-electron' },
-          { text: 'Vite Plugin Electron-renderer', link: '/plugin/vite-plugin-electron-renderer' },
+          { text: 'Features', link: '/guide/features' },
+          { text: 'Plugins', link: '/guide/plugins' },
+          { text: 'Templates', link: '/guide/templates' },
         ]
       },
       {
