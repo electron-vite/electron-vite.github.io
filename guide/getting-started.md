@@ -31,13 +31,13 @@ Whether you want to build an Electron application quickly or want to optimize an
 ## Scaffolding Your First Vite Project
 
 ::: tip Fist way
-Use the command provided by electron-vite.
+Use the command provided by 👉 [npm create electron-vite@latest](https://github.com/electron-vite/create-electron-vite)
 :::
 
 ![create-electron-vite.gif](https://github.com/electron-vite/create-electron-vite/raw/main/electron-vite-vue.gif?raw=true)
 
 ::: warning Second way
-Use Vite's official create command.
+Use Vite's official create command
 :::
 
 ```sh
