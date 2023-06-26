@@ -8,10 +8,16 @@
 
 The same as extraResources but copy into the app’s content directory (`Contents` for MacOS, root directory for Linux and Windows).
 
-```json5
-     "extraFiles": [
-      { "from": "dllFiles", "to": ".", "filter": ["*.dll"] },
-    ],
+```jsonc
+{
+  "extraFiles": [
+    {
+      "from": "dllFiles",
+      "to": ".",
+      "filter": ["*.dll"]
+    }
+  ]
+}
 ```
 
 ## Static files for the rendering process

@@ -184,8 +184,3 @@ renderer({
 ## [JavaScript API](https://github.com/electron-vite/vite-plugin-electron#javascript-api)
 
 - [nuxt-electron](https://github.com/caoxiemeihao/nuxt-electron) based on `vite-plugin-electron`
-
-## Examples
-
-- [Multiple BrowserWindow](https://github.com/electron-vite/vite-plugin-electron/tree/v0.12.0/examples/multiple-window)
-- [Web worker in Renderer process](https://github.com/electron-vite/vite-plugin-electron-renderer/tree/v0.14.5/examples/worker)

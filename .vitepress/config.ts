@@ -45,41 +45,28 @@ export default defineConfig({
           { text: 'Features', link: '/guide/features' },
           { text: 'Plugins', link: '/guide/plugins' },
           { text: 'Templates', link: '/guide/templates' },
-        ]
+          { text: 'Examples', link: '/guide/examples' },
+        ],
       },
       {
         text: 'Build',
         collapsed: false,
         items: [
+          { text: 'Electron Forge', link: '/build/electron-forge' },
           { text: 'Electron Builder', link: '/build/electron-builder' },
-          { text: 'Packaging Static Resource', link: '/build/packaging-static-resource' },
-        ]
+        ],
       },
       {
-        text: 'Electron',
+        text: 'FAQ',
         collapsed: false,
         items: [
-          { text: 'Render Process Use Nodejs', link: '/electron/render-process-use-nodejs' },
-          { text: 'Multiple Programs Windows', link: '/electron/multiple-programs-windows' },
-        ]
+          { text: 'Pre-Bundling', link: '/faq/pre-bundling' },
+          { text: 'dependencies', link: '/faq/dependencies' },
+          { text: 'Env Variables', link: '/faq/env-variables' },
+          { text: 'Static Resource', link: '/faq/static-resource' },
+        ],
       },
-      {
-        text: 'Troubleshooting',
-        collapsed: false,
-        items: [
-          { text: 'Issue', link: '/trouble-shooting/issue' },
-        ]
-      },
-      {
-        text: 'Community',
-        collapsed: false,
-        items: [
-          { text: 'Development And Contribution', link: '/community/development-and-contribution' },
-          { text: 'Acknowledge', link: '/community/acknowledge' },
-        ]
-      }
     ],
-
     socialLinks: [
       { icon: 'discord', link: 'https://discord.gg/sRqjYpEAUK' },
       { icon: 'github', link: 'https://github.com/electron-vite' }
@@ -91,7 +78,7 @@ export default defineConfig({
         appId: 'MHLM0MHOBZ',
         apiKey: '9d4e29b666484f54feafbef08cac6754',
         indexName: 'electron-viteio'
-      }
-    }
-  }
+      },
+    },
+  },
 })
