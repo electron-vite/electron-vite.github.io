@@ -22,6 +22,170 @@
   </ul>
 </details>
 
-## Using Plugins
+## Basic usage
 
-TODO:
+```ts
+// vite.config.ts
+import electron from 'vite-plugin-electron'
+
+export default {
+  plugins: [
+    electron({
+      entry: 'electron/main.ts',
+    }),
+  ],
+}
+```
+
+## Use Node.js and Electron in Renderer process
+
+```ts
+// vite.config.ts
+import electron from 'vite-plugin-electron'
+import renderer from 'vite-plugin-electron-renderer'
+
+export default {
+  plugins: [
+    electron({
+      entry: 'electron/main.ts',
+    }),
+    renderer(),
+  ],
+}
+```
+
+## Restart And Reload
+
+```ts
+// Restart and Launch App
+electron({
+  entry: 'electron/main.ts',
+  onstart(args) {
+    args.startup()
+  },
+})
+
+// Reload the Renderer process, for Preload scripts
+electron({
+  entry: 'electron/preload.ts',
+  onstart(args) {
+    args.reload()
+  },
+})
+```
+
+
+## Code split
+
+`vite-plugin-electron` allows for very flexible code splitting, it can be built using passing arrays, or using [Vite's built-in multi-entry](https://vitejs.dev/config/build-options.html#build-lib) build.
+
+<details>
+  <summary>中文</summary>
+  <p><code>vite-plugin-electron</code> 可以进行十分灵活的代码拆分，它可以使用传递数组的形式构建，或者使用 <a target="_blank" href="https://vitejs.dev/config/build-options.html#build-lib">Vite 内置的多入口</a> 构建。</p>
+</details>
+
+```ts
+// Use array
+electron([
+  {
+    // Main-Process entry file of the Electron App.
+    entry: 'electron/main.ts',
+  },
+  {
+    entry: 'electron/main-chunk.ts',
+  },
+])
+
+// Use Vite multi-entry
+electron({
+  entry: {
+    // Main-Process entry file of the Electron App.
+    main: 'electron/main.ts'
+    'main-chunk': 'electron/main-chunk.ts',
+  },
+})
+```
+
+## Custom Build
+
+`vite-plugin-electron` supports the full amount of [Vite's InlineConfig](https://vitejs.dev/guide/api-javascript.html#inlineconfig).
+
+<details>
+  <summary>中文</summary>
+  <p><code>vite-plugin-electron</code> 支持全量的 <a target="_blank" href="https://vitejs.dev/guide/api-javascript.html#inlineconfig">Vite 配置</a>。</p>
+</details>
+
+```ts
+electron({
+  entry: 'electron/main.ts',
+  // 👉 https://vitejs.dev/guide/api-javascript.html#inlineconfig
+  vite: { },
+})
+```
+
+## C/C++ Native
+
+- [Use in Main process](https://github.com/electron-vite/vite-plugin-electron#cc-native)
+
+```ts
+// First way
+electron({
+  entry: 'electron/main.ts',
+  vite: {
+    build: {
+      rollupOptions: {
+        // Need to put sqlite3 into dependencies
+        external: ['sqlite3'],
+      },
+    },
+  },
+})
+
+// Second way
+import native from 'vite-plugin-native'
+electron({
+  entry: 'electron/main.ts',
+  vite: {
+    plugins: [
+      // Use vite-plugin-native
+      native(/* options */),
+    ],
+  },
+})
+```
+
+- [Use in Renderer process](https://github.com/electron-vite/vite-plugin-electron-renderer/blob/v0.14.5/examples/quick-start/vite.config.ts#L11-L14)
+
+```ts
+renderer({
+  resolve: {
+    // Need to put sqlite3 into dependencies
+    sqlite3: { type: 'cjs' },
+  },
+})
+```
+
+## ESmodule
+
+- Use in Main process
+
+  Works fine!
+
+- [Use in Renderer process](https://github.com/electron-vite/vite-plugin-electron-renderer/blob/v0.14.5/examples/quick-start/vite.config.ts#L11-L14)
+
+```ts
+renderer({
+  resolve: {
+    got: { type: 'esm' },
+  },
+})
+```
+
+## [JavaScript API](https://github.com/electron-vite/vite-plugin-electron#javascript-api)
+
+- [nuxt-electron](https://github.com/caoxiemeihao/nuxt-electron) based on `vite-plugin-electron`
+
+## Examples
+
+- [Multiple BrowserWindow](https://github.com/electron-vite/vite-plugin-electron/tree/v0.12.0/examples/multiple-window)
+- [Web worker in Renderer process](https://github.com/electron-vite/vite-plugin-electron-renderer/tree/v0.14.5/examples/worker)
