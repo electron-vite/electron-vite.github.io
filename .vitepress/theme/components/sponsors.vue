@@ -14,6 +14,17 @@ import { VPHomeSponsors } from 'vitepress/theme'
       <img src="../assets/intellibar.webp" />
     </a>
   </div>
+  <div class="user-topbar">👨‍💻‍ Users</div>
+  <div class="user-list">
+    <a
+      class="user-item"
+      href="https://polypane.app/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img src="../assets/polypane.webp" />
+    </a>
+  </div>
   <div class="sponsor-desc">Electron⚡️Vite is free and open source, made possible by wonderful sponsors.</div>
   <div class="action">
     <a
@@ -36,9 +47,14 @@ import { VPHomeSponsors } from 'vitepress/theme'
 </template>
 
 <style scoped>
+
 .sponsor-topbar {
-  border-top: 1px solid var(--vp-c-gutter);
   margin-top: 2rem;
+  border-top: 1px solid var(--vp-c-gutter);
+}
+
+.sponsor-topbar,
+.user-topbar {
   padding: 1rem 0;
   text-align: center;
 }
@@ -52,17 +68,20 @@ import { VPHomeSponsors } from 'vitepress/theme'
   text-align: center;
 }
 
-.sponsor-list {
+.sponsor-list,
+.user-list {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.sponsor-item {
+.sponsor-item,
+.user-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 240px;
+  height: 60px;
   padding: 10px 30px;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -73,7 +92,8 @@ import { VPHomeSponsors } from 'vitepress/theme'
   cursor: pointer;
 }
 
-.sponsor-item:hover {
+.sponsor-item:hover,
+.user-item:hover {
   border-color: var(--vp-button-sponsor-hover-border);
 }
 
