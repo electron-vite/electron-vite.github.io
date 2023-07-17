@@ -63,7 +63,7 @@ import { VPHomeSponsors } from 'vitepress/theme'
   align-items: center;
   justify-content: center;
   width: 150px;
-  padding: 5px 30px;
+  padding: 10px 30px;
   border: 1px solid transparent;
   border-radius: 4px;
   border-color: var(--vp-button-sponsor-border);
@@ -78,7 +78,7 @@ import { VPHomeSponsors } from 'vitepress/theme'
 }
 
 .sponsor-item img {
-  height: 50px;
+  object-fit: contain;
 }
 
 .action {
