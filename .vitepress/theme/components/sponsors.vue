@@ -86,6 +86,8 @@ import { VPHomeSponsors } from 'vitepress/theme'
   border: 1px solid transparent;
   border-radius: 4px;
   border-color: var(--vp-button-sponsor-border);
+  border-color: var(--vp-c-brand);
+  border-color: var(--vp-c-gutter);
   background-color: var(--vp-c-bg-soft);
   background-color: white;
   transition: color 0.25s, border-color 0.25s, background-color 0.25s;
