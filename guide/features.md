@@ -105,24 +105,24 @@ app.whenReady().then(() => {
 
 > Added in: v0.13.0
 
-During dev, we exclude the `cjs` npm-pkg from bundle. **It's fast**! Like Vite's [👉 Not Bundle](https://vitejs.dev/guide/why.html#why-not-bundle-with-esbuild). **Only works during the `vite serve` phase by default**.
+During the development phase, we can exclude the `cjs` format of npm-pkg from bundle. Like Vite's [👉 Not Bundle](https://vitejs.dev/guide/why.html#why-not-bundle-with-esbuild). **It's fast**!
 
 ```js
 import electron from 'vite-plugin-electron'
 import { notBundle } from 'vite-plugin-electron/plugin'
 
-export default {
+export default defineConfig(({ command }) => ({
   plugins: [
     electron({
       entry: 'electron/main.ts',
       vite: {
         plugins: [
-          notBundle(/* NotBundleOptions */),
+          command === 'serve' && notBundle(/* NotBundleOptions */),
         ],
       },
     }),
   ],
-}
+}))
 ```
 
 **API**
