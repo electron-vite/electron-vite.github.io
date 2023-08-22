@@ -23,19 +23,18 @@ hero:
 
 features:
   - icon: 🔥
-    title: HOT Restart
+    title: Hot Restart
     details: Restart the App immediately after modifying the <font color="var(--vp-c-brand)">Main process</font> code
     link: /guide/features.html#hot-restart
+
+  - icon: 🔄
+    title: Hot Reload
+    details: The Renderer process is automatically refreshed to reload the <font color="var(--vp-c-brand)">Preload scripts</font> after the Preload scripts is modified
+    link: /guide/features.html#hot-reload
 
   - icon: ⚡️
     title: HMR
     details: The <font color="var(--vp-c-brand)">Renderer process</font> is based on the lightweight and fast HMR provided by Vite
     link: /guide/features.html#hmr
 
-  - icon: 🔄
-    title: HOT Reload
-    details: The Renderer process is automatically refreshed to reload the <font color="var(--vp-c-brand)">Preload scripts</font> after the Preload scripts is modified
-    link: /guide/features.html#hot-reload
-
 ---
-

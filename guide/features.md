@@ -7,7 +7,7 @@ All [Electron⚡️Vite](https://github.com/electron-vite) features are included
   <p><a target="_blank" href="https://github.com/electron-vite">Electron⚡️Vite</a> 所有功能均包含在一个基于 Vite 开发的  <a target="_blank" href="https://github.com/electron-vite/vite-plugin-electron">vite-plugin-electron</a> 插件，它能使得用户能很方便的在一个 Vite 项目中快速集成 Electron。</p>
 </details>
 
-## HOT Restart
+## Hot Restart
 
 By default `vite-plugin-electron` has automatic restart enabled, which works simply by listening for the completion of a Vite build that kills the running Electron App process and restarts a new Electron App process.
 
@@ -35,6 +35,39 @@ export default {
         args.startup()
       },
     }),
+  ],
+}
+```
+
+## Hot Reload
+
+When Preload scripts is modified, we just need to refresh the Renderer process. But it requires us to control it explicitly because Vite doesn't know which code is the Preload scripts. It's really simple!
+
+<details>
+  <summary>中文</summary>
+  <p>当预加载脚本被修改时，我们只需要重新刷新渲染进程就可以了，但是它需要我们显式的控制它，因为 Vite 不知道哪些代码是预加载脚本。它很简单！</p>
+</details>
+
+```ts
+// vite.config.ts
+import electron from 'vite-plugin-electron'
+
+export default {
+  plugins: [
+    electron([
+      {
+        entry: 'electron/main/index.ts',
+      },
+      {
+        // Preload scripts entry file of the Electron App.
+        entry: 'electron/preload/index.ts',
+        onstart(args) {
+          // Notify the Renderer process to reload the page when the Preload scripts build is complete, 
+          // instead of restarting the entire Electron App.
+          args.reload()
+        },
+      }
+    ]),
   ],
 }
 ```
@@ -68,35 +101,52 @@ app.whenReady().then(() => {
 })
 ```
 
-## HOT Reload
+## Not Bundle
 
-When Preload scripts is modified, we just need to refresh the Renderer process. But it requires us to control it explicitly because Vite doesn't know which code is the Preload scripts. It's really simple!
+> Added in: v0.13.0
 
-<details>
-  <summary>中文</summary>
-  <p>当预加载脚本被修改时，我们只需要重新刷新渲染进程就可以了，但是它需要我们显式的控制它，因为 Vite 不知道哪些代码是预加载脚本。它很简单！</p>
-</details>
+During dev, we exclude the `cjs` npm-pkg from bundle. **It's fast**! Like Vite's [👉 Not Bundle](https://vitejs.dev/guide/why.html#why-not-bundle-with-esbuild). **Only works during the `vite serve` phase by default**.
 
-```ts
-// vite.config.ts
+```js
 import electron from 'vite-plugin-electron'
+import { notBundle } from 'vite-plugin-electron/plugin'
 
 export default {
   plugins: [
-    electron([
-      {
-        entry: 'electron/main/index.ts',
+    electron({
+      entry: 'electron/main.ts',
+      vite: {
+        plugins: [
+          notBundle(/* NotBundleOptions */),
+        ],
       },
-      {
-        // Preload scripts entry file of the Electron App.
-        entry: 'electron/preload/index.ts',
-        onstart(args) {
-          // Notify the Renderer process to reload the page when the Preload scripts build is complete, 
-          // instead of restarting the entire Electron App.
-          args.reload()
-        },
-      }
-    ]),
+    }),
   ],
 }
+```
+
+**API**
+
+`notBundle(/* NotBundleOptions */)`
+
+```ts
+export interface NotBundleOptions {
+  filter?: (id: string) => void | false
+}
+```
+
+**How to work**
+
+Let's use the `electron-log` as an examples.
+
+```js
+┏—————————————————————————————————————┓
+│ import log from 'electron-log'      │
+┗—————————————————————————————————————┛
+                   ↓
+Modules in `node_modules` are not bundled during development, it's fast!
+                   ↓
+┏—————————————————————————————————————┓
+│ const log = require('electron-log') │
+┗—————————————————————————————————————┛
 ```
