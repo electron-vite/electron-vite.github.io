@@ -23,6 +23,10 @@ export default defineConfig({
     nav: [
       { text: 'Guide', link: '/guide/why-electron-vite' },
       {
+        text: 'Examples',
+        link: 'https://github.com/caoxiemeihao/electron-vite-samples',
+      },
+      {
         text: 'Template', items: [
           {
             text: 'electron-vite-vue',
@@ -31,8 +35,8 @@ export default defineConfig({
           {
             text: 'electron-vite-react',
             link: 'https://github.com/electron-vite/electron-vite-react'
-          }
-        ]
+          },
+        ],
       },
     ],
     sidebar: [
@@ -44,8 +48,8 @@ export default defineConfig({
           { text: 'Getting Started', link: '/guide/getting-started' },
           { text: 'Features', link: '/guide/features' },
           { text: 'Plugins', link: '/guide/plugins' },
-          { text: 'Templates', link: '/guide/templates' },
           { text: 'Examples', link: '/guide/examples' },
+          { text: 'Templates', link: '/guide/templates' },
         ],
       },
       {
