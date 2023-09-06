@@ -4,68 +4,46 @@ The templates currently used are packaged and built using [electron-builder](htt
 
 ## electron-builder.json5
 
-### Main Config
-
 ```json5
 /**
  * @see https://www.electron.build/configuration/configuration
  */
 {
-  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
   "appId": "YourAppID",
-  "productName":"YourAppName",
-  "asar": true,
+  "asar": false,
+  "productName": "YourAppName",
   "directories": {
     "output": "release/${version}"
   },
   "files": [
-    "dist-electron",
-    "dist"
+    "dist",
+    "dist-electron"
   ],
-  "linux": {
-    "icon": "public/icon.png",
-  },
-  "mac": {
-    "artifactName": "${productName}_${version}.${ext}",
-    "icon": "public/icon.icns",
-    "target": [
-      "dmg"
-    ]
-  },
   "win": {
-    "icon": "public/icon.ico",
     "target": [
       {
         "target": "nsis",
-        "arch": [
-          "x64"
-        ]
+        "arch": ["x64"]
       }
     ],
-    "artifactName": "${productName}_${version}.${ext}"
+    "artifactName": "${productName}-Windows-${version}-Setup.${ext}"
   },
   "nsis": {
     "oneClick": false,
     "perMachine": false,
     "allowToChangeInstallationDirectory": true,
     "deleteAppDataOnUninstall": false
+  },
+  "mac": {
+    "target": ["dmg"],
+    "artifactName": "${productName}-Mac-${version}-Installer.${ext}"
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "artifactName": "${productName}-Linux-${version}.${ext}"
   }
 }
 ```
-
----
-
-### Details
-
-#### $schema
-
-This is a JSON architecture file used to check the correctness of the configuration file. Usually, you don't need to change it.
-<details>
-  <summary>
-  中文
-  </summary>
- 这是一个 JSON 架构文件，用于检查配置文件的正确性。通常情况下，您不需要改变它。
-</details>
 
 ---
 
@@ -244,5 +222,3 @@ Windows平台特定的 NSIS 配置。
 ## More
 
 If you want to know more about the configuration, please refer to the [electron-build/configuration](https://www.electron.build/configuration/configuration) documentation.
-
-
