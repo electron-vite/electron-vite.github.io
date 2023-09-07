@@ -5,7 +5,8 @@ layout: home
 
 hero:
   name: "Electron⚡️Vite"
-  tagline: Create desktop applications using Electron and Vite
+  text: The easiest way to turn a Vite App into an Electron App
+  tagline: Full-featured Renderer process support, especially <code>C/C++</code> addons.
   image:
     src: /electron-vite.animate.svg
     alt: electron-vite
