@@ -64,10 +64,13 @@ export default defineConfig({
         text: 'FAQ',
         collapsed: false,
         items: [
+          { text: 'C/C++ Addons', link: '/faq/cpp-addons' },
           { text: 'Pre-Bundling', link: '/faq/pre-bundling' },
           { text: 'dependencies', link: '/faq/dependencies' },
           { text: 'Env Variables', link: '/faq/env-variables' },
           { text: 'Static Resource', link: '/faq/static-resource' },
+          { text: 'Preload Code Not Split', link: '/faq/preload-not-split' },
+          { text: 'Improve Build Performance', link: '/faq/build-performance' },
         ],
       },
     ],
