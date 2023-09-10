@@ -33,7 +33,7 @@ features:
 
   - icon: 🎉
     title: Rich samples 👆
-    details: <font color="var(--vp-c-brand)">📦 Out-of-the-box</font>, you can find a template that works for you here.
+    details: <font color="var(--vp-c-brand)">📦 Out-of-the-box</font>, you can find a sample that works for you here.
     link: https://github.com/caoxiemeihao/electron-vite-samples
 
   # - icon: 🥳
