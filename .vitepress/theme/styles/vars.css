@@ -138,3 +138,8 @@
     height: 240px;
   }
 }
+
+a[href="/faq/dependencies.html"] .text {
+  font-size: 12px;
+  white-space: nowrap;
+}
