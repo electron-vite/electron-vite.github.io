@@ -36,7 +36,7 @@ Use the command provided by 👉 [npm create electron-vite@latest](https://githu
 
 ![create-electron-vite.gif](https://github.com/electron-vite/create-electron-vite/raw/main/electron-vite-vue.gif?raw=true)
 
-::: warning Second way
+::: tip Second way
 Use Vite's official create command
 :::
 
