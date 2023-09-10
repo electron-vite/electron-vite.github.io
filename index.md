@@ -31,9 +31,14 @@ features:
     title: Perfect
     details: Full-featured Renderer process support, even <font color="var(--vp-c-brand)">C/C++</font> addons.
 
-  - icon: 🥳
-    title: Really simple
-    details: <font color="var(--vp-c-brand)">Electron⚡️Vite</font> makes developing Electron apps as easy as normal Vite projects.
+  - icon: 🎉
+    title: Rich samples 👆
+    details: <font color="var(--vp-c-brand)">📦 Out-of-the-box</font>, you can find a template that works for you here.
+    link: https://github.com/caoxiemeihao/electron-vite-samples
+
+  # - icon: 🥳
+  #   title: Really simple
+  #   details: <font color="var(--vp-c-brand)">Electron⚡️Vite</font> makes developing Electron apps as easy as normal Vite projects.
 
   # - icon: 🔥
   #   title: Hot Restart

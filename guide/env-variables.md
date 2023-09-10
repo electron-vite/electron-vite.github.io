@@ -15,7 +15,11 @@ VITE_TEST_BOOLEAN=true
 ## How to use env
 
 ```ts
-import.meta.env.VITE_TEST_STRING,
-import.meta.env.VITE_TEST_NUMVER,
+// Main process
+// Preload scripts
+// Renderer process
+
+import.meta.env.VITE_TEST_STRING
+import.meta.env.VITE_TEST_NUMVER
 import.meta.env.VITE_TEST_BOOLEAN
 ```
