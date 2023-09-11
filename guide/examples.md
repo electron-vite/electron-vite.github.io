@@ -1,6 +1,6 @@
 # Examples
 
-**[👉 electron-vite-samples](https://github.com/caoxiemeihao/electron-vite-samples)** maintains a lot of boilerplate samples, it includes the really confusing `C/C++` modules like [better-sqlite3](https://www.npmjs.com/package/better-sqlite3), [sqlite3](https://www.npmjs.com/package/sqlite3), [serialport](https://www.npmjs.com/package/serialport). There are also npm packages in `esmodule` format, like [node-fetch](https://www.npmjs.com/package/node-fetch), [got](https://www.npmjs.com/package/got) etc.
+**[👉 electron-vite-samples](https://github.com/caoxiemeihao/electron-vite-samples)** maintains a lot of boilerplate samples, it includes the really confusing `C/C++` addons like [better-sqlite3](https://www.npmjs.com/package/better-sqlite3), [sqlite3](https://www.npmjs.com/package/sqlite3), [serialport](https://www.npmjs.com/package/serialport). There are also npm-pkg in `esmodule` format, like [node-fetch](https://www.npmjs.com/package/node-fetch), [got](https://www.npmjs.com/package/got) etc.
 
 This is really helpful for someone who is new to [Electron⚡️Vite](https://github.com/electron-vite).
 
