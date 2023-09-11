@@ -225,7 +225,34 @@ const content = readFileSync('foo.txt', 'utf8')
 ipcRenderer.send('foo', 'arg1')
 ```
 
-### Load Third-party modules
+### How to work
+
+```log
+┏————————————————————————————————————————┓         ┏—————————————————┓
+│ import { ipcRenderer } from 'electron' │         │ Vite dev server │
+┗————————————————————————————————————————┛         ┗—————————————————┛
+         │                                                   │
+         │ 1. Pre-Bundling electron module into              │
+         │    node_modules/.vite-electron-renderer/electron  │
+         │                                                   │
+         │ 2. HTTP(Request): electron module                 │
+         │ ————————————————————————————————————————————————> │
+         │                                                   │
+         │ 3. Alias redirects to                             │
+         │    node_modules/.vite-electron-renderer/electron  │
+         │    ↓                                              │
+         │    const { ipcRenderer } = require('electron')    │
+         │    export { ipcRenderer }                         │
+         │                                                   │
+         │ 4. HTTP(Response): electron module                │
+         │ <———————————————————————————————————————————————— │
+         │                                                   │
+┏————————————————————————————————————————┓         ┏—————————————————┓
+│ import { ipcRenderer } from 'electron' │         │ Vite dev server │
+┗————————————————————————————————————————┛         ┗—————————————————┛
+```
+
+### Load third-party modules
 
 In most cases a Node.js npm-pkg written in pure JavaScript can be used directly in the Renderer process. If it is a `C/C++` addon or `ESModule` format package, it needs to be [pre-bundle](https://vitejs.dev/guide/dep-pre-bundling.html) before it can work.
 
@@ -236,7 +263,3 @@ See the [👉 Dependency Pre-Bundling](/guide/dependency-pre-bundling.html) sect
   <p>多数情况下一个纯 JavaScript 编写的 Node.js npm 包是可以直接在渲染进程中使用的。如果它是 <code>C/C++</code> 扩展，或者 <code>ESModule</code> 格式包，那么需要将它<a target="_blank" href="https://vitejs.dev/guide/dep-pre-bundling.html">预构建</a>后才可以工作。</p>
   <p>详情请看 <a href="/guide/dependency-pre-bundling.html">👉 Dependency Pre-Bundling</a> 部分。</p>
 </details>
-
-
-
-
