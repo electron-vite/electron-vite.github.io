@@ -4,14 +4,15 @@
 
 During the development phase, we can exclude the `cjs` format of npm-pkg from bundle. Like Vite's [👉 Not Bundle](https://vitejs.dev/guide/why.html#why-not-bundle-with-esbuild). **It's fast**!
 
-<details>
-  <summary>中文</summary>
-  <p>在开发阶段，我们可以排除 <code>cjs</code> 格式 npm 包的构建。就像 Vite 的 <a target="_blank" href="https://vitejs.dev/guide/why.html#why-not-bundle-with-esbuild">👉 Not Bundle</a>. <strong>它非常快</strong>！</p>
-</details>
-
 ::: tip Note
 Applies to **Main process** and **Preload scripts**.
 :::
+
+<details>
+  <summary>中文</summary>
+  <p>在开发阶段，我们可以排除 <code>cjs</code> 格式 npm 包的构建。就像 Vite 的 <a target="_blank" href="https://vitejs.dev/guide/why.html#why-not-bundle-with-esbuild">👉 Not Bundle</a>. <strong>它非常快</strong>！</p>
+  <p>适用于<strong>主进程</strong>和<strong>预加载脚本</strong>。</p>
+</details>
 
 ```js
 import electron from 'vite-plugin-electron'
