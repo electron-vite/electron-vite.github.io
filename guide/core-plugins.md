@@ -8,7 +8,7 @@ It also provides a full [JavaScript API](https://github.com/electron-vite/vite-p
 
 <details>
   <summary>中文</summary>
-  <p><a target="_blank" href="https://github.com/electron-vite/vite-plugin-electron">vite-plugin-electron</a> 使得你开发 <a target="_blank" href="https://www.electronjs.org/">Electron</a> 应用像开发正常的 Web 应用那样简单，它可以非常简单与 <a target="_blank" href="https://vitejs.dev/">Vite</a> 官方的模板结合！</p>
+  <p><a target="_blank" href="https://github.com/electron-vite/vite-plugin-electron">vite-plugin-electron</a> 使得你开发 <a target="_blank" href="https://www.electronjs.org/">Electron</a> 应用像开发正常的 Web 应用那样简单，它可以非常简单得与 <a target="_blank" href="https://vitejs.dev/">Vite</a> 官方的模板结合！</p>
   <p>除此之外它还提供全量的 <a target="_blank" href="https://github.com/electron-vite/vite-plugin-electron#javascript-api">JavaScript API</a> 可以很方便的在任何地方使用它。</p>
 </details>
 
