@@ -4,7 +4,7 @@
 This documentation is limited to building App using [electron-builder](https://www.electron.build/).
 :::
 
-If a third-party npm package can be built normally by [Vite](https://vitejs.dev/), we recommend placing it in `devDependencies`, which will reduce the size of the packaged App.
+If a third-party npm-pkg can be built normally by [Vite](https://vitejs.dev/), we recommend placing it in `devDependencies`, which will reduce the size of the packaged App.
 In some extreme cases, such as when using `C/C++` addons, if we cannot build it correctly, we need to put it in `dependencies` to ensure that the App can work properly after being built.
 
 <details>

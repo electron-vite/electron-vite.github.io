@@ -1,6 +1,6 @@
 # Dependency Pre-Bundling
 
-In general. Vite's [pre-bundle](https://vitejs.dev/guide/dep-pre-bundling.html) all third-party modules into Web format, but it doesn't fully work with the Electron Renderer process, especially the `C/C++` modules. For this purpose [vite-plugin-electron-renderer](https://github.com/electron-vite/vite-plugin-electron-renderer) provides [Pre-Bundling](https://github.com/electron-vite/vite-plugin-electron-renderer#dependency-pre-bundling) adapted to the Electron Renderer process.
+In general. Vite's [pre-bundle](https://vitejs.dev/guide/dep-pre-bundling.html) all third-party npm-pkg into Web format, but it doesn't fully work with the Electron Renderer process, especially the `C/C++` addons. For this purpose [vite-plugin-electron-renderer](https://github.com/electron-vite/vite-plugin-electron-renderer) provides [Pre-Bundling](https://github.com/electron-vite/vite-plugin-electron-renderer#dependency-pre-bundling) adapted to the Electron Renderer process.
 
 <details>
   <summary>中文</summary>
