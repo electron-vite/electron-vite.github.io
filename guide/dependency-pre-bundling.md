@@ -56,3 +56,43 @@ export default {
   ],
 }
 ```
+
+## Advance
+
+So far, Pre-Bundling of [vite-plugin-electron-renderer](https://github.com/electron-vite/vite-plugin-electron-renderer) is still considered an "experimental" feature.
+
+Below is an example showing how to fully customize a Pre-Bundling.
+
+<details>
+  <summary>中文</summary>
+  <p>目前为止，<a target="_blank" href="https://github.com/electron-vite/vite-plugin-electron-renderer">vite-plugin-electron-renderer</a> 的 Pre-Bundling 仍然被视为是一个“实验性”的功能。</p>
+  <p>下面是展示如何完全自定义预构建的案例。</p>
+</details>
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import renderer from 'vite-plugin-electron-renderer'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    // Use Node.js API in the Renderer process
+    renderer({
+      resolve: {
+        'node-fetch': {
+          type: 'esm',
+          async build(args) {
+            // 1. Simple code snippet
+            return `export * from 'node-fetch'`
+
+            // 2. Build using built-in shortcuts
+            return args.cjs(`export default require('node-fetch');`)
+            return args.esm('node-fetch', { /* esbuild options */ })
+          },
+        },
+      },
+    }),
+  ],
+})
+```
