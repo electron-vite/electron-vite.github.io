@@ -71,6 +71,7 @@ export default defineConfig({
         items: [
           { text: 'Electron Forge', link: '/faq/electron-forge' },
           { text: 'dependencies vs devDependencies', link: '/faq/dependencies' },
+          { text: 'Debug', link: '/faq/debug' },
         ],
       },
     ],
